@@ -1,0 +1,49 @@
+\section*{Annexes}
+
+\frame
+{
+	\frametitle{UID}
+	Unique Identifier
+	\begin{itemize}
+		\item 64 caractères maximum, combinaison entre chiffres et points (OSI Object Identication, numeric form, ISO 8824)
+		\item Afin d'en assurer l'unicité, le UID est composé par deux parties enchaînées :
+		\begin{itemize}
+			\item Une racine liée à une organisation (racine attribuée par la norme ISO 9823-3)
+			\item Un suffixe garanti unique par l'organisation
+		\end{itemize}
+	\end{itemize}
+	La racine $1.2.840.10008$ identifie le standard DICOM
+}
+
+\frame
+{
+	\frametitle{…tiquettes d'identification}
+	\begin{itemize}
+		\item SÈparÈes en Groupe et ÈlÈment
+		\item Notation hexadÈcimale (0123456789ABDCEF)
+		\item Identification unique, typage liÈ
+		\begin{description}
+			\item[(0010,0010)] Patient Name (PN)
+			\item[(0010,0020)] Patient ID (LO)
+			\item[(0008,0050)] Accession Number (SH)
+			\item[(0020,000d)] Study Instance UID (UI)
+			\item[(7fe0,0010)] Pixel Data (OW ou OB)
+		\end{description}
+	\end{itemize}
+}
+
+\frame
+{
+	\frametitle{Typage}
+}
+
+\frame
+{
+	\frametitle{SOP . Images}
+	Selon la classe SOP, un objet DICOM peut décrire une ou plusieurs images.
+	
+	Par exemple, il est normal de stocker une séquence d'images pour une échographie.
+	
+	Généralement, on parle d'Enhanced DICOM pour les objets décrivant plusieurs images.
+}
+

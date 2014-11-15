@@ -1,0 +1,27 @@
+\section{Représentations informatiques}
+
+\frame
+{
+	\frametitle{Little ou Big Endian}
+	\begin{itemize}
+		\item Origines chaotiques de l’informatique.
+		\item Différents ordres de stockage pour les valeurs encodées sur plusieurs octets (1 octet = 8 bits = $2^8$ possibilités = 256 valeurs).
+		\begin{itemize}
+			\item Little Endian : moins importants en dernier.
+			\item Big Endian : plus importants en dernier.
+		\end{itemize}
+		\item Exemple avec l’entier 2012 :
+		\begin{itemize}
+			\item Sur 2 octets
+			\begin{itemize}
+				\item Little Endian : 0x07DC
+				\item Big Endian : 0xDC07
+			\end{itemize}
+			\item Sur 4 octets
+			\begin{itemize}
+				\item Little Endian : 0x000007DC
+				\item Big Endian : 0xDC070000
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+}

@@ -1,0 +1,98 @@
+\section{DICOM en pratique}
+
+\frame
+{
+	\frametitle{Anonymisation}
+	\begin{itemize}
+		\item Utilisation d’images cliniques pour la recherche ou l’enseignement.
+		\item Fichiers mis à disposition du public.
+		\item Nécessité d’anonymat : suppression des informations personnelles permettant d'identifier le patient.
+		\begin{itemize}
+			\item PatientsName (0010,0010)
+			\item PatientID (0010,0020)
+			\item PatientBirthDate (0010,0030)
+			
+			$\rightarrow$ de type 1 : à remplacer, pas supprimer !
+			\item ReferringPhysicianName (0008,0090)
+			\item etc.
+		\end{itemize}
+	\end{itemize}
+}
+
+\frame
+{
+	\frametitle{Achat d'un équipement}
+	\begin{enumerate}
+		\item Avant l'achat : soumission de l'appel d'offre
+		\begin{itemize}
+			\item Définition du scénario de travail souhaité.
+			
+			Exemple : les images brutes exportées pourront être réutilisées a posteriori.
+			\item Rédaction du cahier des charges DICOM.
+			\begin{itemize}
+				\item Préciser le niveau d’exigence de DICOM.
+				
+				$\rightarrow$ faire appel à un consultant ou à des coll\'egues,
+				
+				$\rightarrow$ ou acquérir le savoir-faire en interne.
+				\item Demander le Document de Conformité DICOM.
+			\end{itemize}
+		\end{itemize}
+		\item Acceptation protocolée.
+		\begin{itemize}
+			\item Vérification de DICOM.
+			\item Vérification des du scénarios requis.
+			\item Tests.
+		\end{itemize}
+	\end{enumerate}
+}
+
+\frame
+{
+	\frametitle{DICOM Conformance}
+	Point faible abordé rapidement la derni\'ere fois.
+	\begin{itemize}
+		\item Le standard pr\'evoit un document "DICOM Conformance Statement" dont le plan et la structure sont pr\'ed\'efinis.
+		\item Par ce document, le fournisseur pr\'ecise le niveau de conformit\'e de son \'equipement au standard DICOM.
+		\begin{itemize}
+			\item Applicable sur chaque mod\`ele, chaque version.
+			\item Le document suit un plan pr\'evu dans le standard.
+			\item Liste des SOP Class support\'ees et des rôles assur\'es (SCU, SCP).
+		\end{itemize}
+	\end{itemize}
+}
+
+\frame
+{
+	\frametitle{Services à demander}
+	Exemples typiques de services DICOM à exiger pour un scanner :
+	\begin{itemize}
+		\item Worklist (SCU) : Import de la liste de patients.
+		\item Store : envoi des images par réseau
+		\begin{itemize}
+			\item Envoi : modalités (SCU) : \textbf{CT}.
+			\item Réception (SCP) : \textbf{CT}, \textbf{IRM}.
+		\end{itemize}
+		\item Print (SCU) : envoi des images pour impression
+	\end{itemize}
+	
+	\begin{center}
+		\includegraphics[width=\linewidth]{./figures/passerelle.png}
+	\end{center}
+
+}
+
+\frame
+{
+	\frametitle{Équipements non standards}
+	
+	\begin{itemize}
+		\item Intégrer dans un workflow DICOM : installer une passerelles de conversion.
+		
+		\begin{center}
+			\includegraphics[width=\linewidth]{./figures/passerelle.png}
+		\end{center}
+		
+		\item Limitation : images stockées en mode Secondary Capture (IOD le plus simple de DICOM), les données d'acquisition des images sont perdues.
+	\end{itemize}
+}

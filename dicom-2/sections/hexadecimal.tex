@@ -1,0 +1,519 @@
+\section{Hexadécimal}
+
+\frame
+{
+	\frametitle{Qu'est-ce que l'hexadécimal ?}
+	\begin{block}{Rappels}
+		\begin{itemize}
+			\item Système de numération : méthode d'écriture des nombres.
+			\item Positionnel : la valeur d'un nombre dépend de sa position.
+			\item Base : nombre de symboles disponibles pour écrire un chiffre.
+		\end{itemize}
+	\end{block}
+	
+	Exemples :	
+	\begin{description}
+		\item[Décimal] 10 symboles : 0 1 2 3 4 5 6 7 8 9
+		\item[Binaire] 2 symboles : 0 1
+		\item[Hexadécimal] 16 symboles : 0 1 2 3 4 5 6 7 8 9 A B C E D F
+	\end{description}
+	
+	Donc, l'hexadécimal est un système de numération positionnel en base $16$.
+}
+
+\frame
+{
+	\frametitle{Représentation des nombres}
+	\begin{itemize}
+		\item Nombre : suite de chiffres dont la valeur dépend de la position.
+		\item La position du chiffres indique la puissance de la base.
+		\item La base peut se noter en indice du nombre.
+	\end{itemize}
+	
+	\begin{equation*}
+	\begin{array}{crcr}
+		& & & 2013_{10} \\
+		= & 2\cdot10^3 + 0\cdot10^2 + 1\cdot10^1+3\cdot10^0 & &\\
+		= & 7 \cdot 16^2 +13\cdot16^1 + 13\cdot16^0 & = & 7DD_{16} \\
+		=  &1\cdot2^{10} + 1\cdot2^{9} + 1\cdot2^{8} + 1\cdot2^{7} + 1\cdot2^{6} + 0\cdot2^{5} & &\\
+		&  + 1\cdot2^{4} + 1\cdot2^{3} + 1\cdot2^{2} + 0\cdot2^{1} + 1\cdot2^{0}& & \\
+		= & 11111011101_2& &
+	\end{array}
+	\end{equation*}
+	
+	En base $16$, on compte en multiples de $16$ :
+	
+	$16^0 = 1$
+	
+	$16^1 = 16$
+	
+	$16^2 = 256$
+	
+	$16^3 = 4096$
+}
+
+\frame
+{
+	\frametitle{Pourquoi l'hexadécimal ?}
+	\begin{itemize}
+		\item En informatique, l'unité logique est le bit ($1$ ou $0$, soit du courant ou pas de courant) $\Rightarrow$ binaire.
+		\item À partir des années $70$ : matériel conçu pour traiter les bits par $8$ (octet) ou par multiples de $8$ (aujourd'hui, le standard passe progressivement de $32$ à $64$~bits).
+		\item Transformation triviale hexadécimale $\leftrightarrow$ binaire.
+	\end{itemize}
+}
+
+\frame
+{
+	\frametitle{Hexadécimal $\rightarrow$ Binaire}
+	\begin{center}
+	$0 = 0000$ $1 = 0001$ $2 = 0010$ $3 = 0011$
+	
+	$4 = 0100$ $5 = 0101$ $6 = 0110$ $7 = 0111$
+	
+	$8 = 1000$ $9 = 1001$ $A = 1010$ $B = 1011$
+	
+	$C = 1100$ $D= 1101$ $E = 1110$ $F = 1111$
+	\end{center}
+}
+
+\frame
+{
+	\frametitle{Hexadécimal en DICOM}
+	\begin{itemize}
+		\item Notation hexadécimale habituellement préfixée avec 0x
+		0xC7 = 0x00C7 = 0x000000C7 = 199
+		
+		\item Pas en DICOM : notation des identifiants
+		(0010,0020) = 0010,0020 = 00100020 = PatientID
+		
+		\item Autres notations possibles, par exemple 00100020H
+	\end{itemize}
+}
+
+\frame
+{
+	\frametitle{Fichiers}
+	\begin{itemize}
+		\item Tout fichier informatique est une suite d’octets
+		\item Tout format informatique décrit comment interpréter les octets
+	\end{itemize}
+}
+
+\frame
+{
+	\frametitle{Binaire $\leftrightarrow$ Textuel}
+	\begin{itemize}
+		\item 0x32303132
+		\begin{description}
+			\item[Interprétation textuelle] 2012
+			\item[Interprétation binaire] 842019122
+		\end{description}
+		\item Rappel : les Data Element sont typés
+		\item Encodage textuel généralement justifié
+		\begin{itemize}
+			\item Âge en années, mois, semaines, jour : $11 Y \neq 11 M \neq 11 Y \neq 11 D$
+			\item Champs utilisés pour le QR : Study Date : 20121101-20121201
+		\end{itemize}
+	\end{itemize}
+}
+
+\frame
+{
+	\frametitle{Fichiers DICOM}
+	\begin{itemize}
+		\item	Préambule (ou pré-entête) 128 octets de données
+		\item Préfixe 4 octets : 0x4449434D = DICM
+		\item Data Set : une suite de Data Elements
+	
+		\item Data Element = Tag + VR + Taille + Valeur
+		\item … mais pas toujours …
+	\end{itemize}
+}
+
+\frame
+{
+	\frametitle{VR Implicite $\leftrightarrow$ Explicite}
+	Différentes façons de “parler DICOM” : implicite ou explicite
+	\begin{description}
+		\item Explicite :  VR mentionné dans Data Element
+		\item Implicite :  VR pas mentionné
+	\end{description}
+	
+	Mais de toute façon, le tag et la taille définissent le VR.
+}
+
+\frame
+{
+	\frametitle{VR Explicite}
+	\begin{itemize}
+		\itemOB, OW, SQ, UN, UT
+	Tag VR 0000 Taille…
+		\item UT : Taille $\neq$ 0xFFFFFFFF (Indéfini)
+		\item Quand indéfini, le Data Element est délimité par un Sequence Delimitation Item
+		\item Autres
+	Tag VR Taille …
+	\end{itemize}
+}
+
+\frame
+{
+	\frametitle{VR implicite}
+	Toujours : Tag Taille …
+}
+
+\frame
+{
+	\frametitle{Little ou Big Endian}
+	\begin{itemize}
+		\item Origines de l’informatique
+		\item Différents ordres de stockage pour les valeurs encodées sur plusieurs octets (entiers)
+		\begin{itemize}
+		\item
+			\item Little Endian : moins importants en dernier
+			\item Big Endian : plus importants en dernier
+		\end{itemize}
+		\item Ne concerne pas les valeurs stockées textuellement :
+		Car 1 lettre/chiffre = 1 octet
+	\end{itemize}
+}
+
+\frame
+{
+	\frametitle{Exemple}
+	\begin{itemize}
+		\item L’entier 2012
+		\item Sur 2 octets
+		\begin{itemize}
+			\item Little Endian : 0x07DC
+			\item Big Endian : 0xDC07
+		\end{itemize}
+		\item Sur 4 octets
+		\begin{itemize}
+			\item Little Endian : 0x000007DC
+			\item Big Endian : 0xDC070000
+		\end{itemize}
+		\item Rappel: 1 octet = 8 bits, 1 hexadécimal = 4 bits
+	\end{itemize}
+}
+
+\frame
+{
+	\frametitle{Multiplicité}
+	\begin{itemize}
+		\item Déjà vu : plusieurs valeurs dans un Data Element
+		OB, OF, OW
+		\item Dans un champ textuel (SH, LO, ST, ...) :
+		
+		Délimitation faite par le caractère $\backslash$
+
+		ImageOrientationPatient: $1\backslash0\backslash0\backslash0\backslash1\backslash0$
+	\end{itemize}
+}
+
+\frame
+{
+	\frametitle{Pixels : native / encapsulated}
+	\begin{itemize}
+		\item 
+		\item 
+		\item 
+		\item 
+		\item 
+	\end{itemize}
+	Dans le champ 7fe0,0010
+Images en échelle de gris ou en couleurs
+Encodage natif : N pixels = N valeurs (OB ou OW)
+Si plusieurs canaux (RGB), N?C valeurs...
+Encodage encapsulé : N pixels = M valeurs (OB)
+M < N
+Compression, cours avec N. Roduit
+}
+
+\frame
+{
+	\frametitle{Différents DICOM...}
+	\begin{itemize}
+		\item 
+		\item 
+		\item 
+		\item 
+		\item 
+	\end{itemize}
+	Différents paramètres
+Implicite / Explicite...
+Little / Big Endian...
+Différents types de compression d’images...
+Natif
+Compression JPEG
+Compression JP2K
+Autres...
+Différents dialectes, chacun ayant un UID
+}
+
+\frame
+{
+	\frametitle{... Handshake}
+	\begin{itemize}
+		\item
+		\item
+		\item
+		\item
+		\item
+	\end{itemize}
+	Lors de l’établissement d’une connexion DICOM, le protocole prévoit une phase d’établissement de quel dialecte sera parlé
+Le SCU fournit une liste de dialectes qu’il connait
+Le SCP répond dans le premier dialecte qu’il connait
+Transformation des données avant le renvoi
+Délais de transferts, plus de données à transf.
+Décompression sur réception ?
+Avantage ou inconvénient ?
+}
+
+\frame
+{
+	\frametitle{Dialectes et pixels}
+	\begin{itemize}
+		\item
+		\item
+		\item
+		\item
+		\item
+	\end{itemize}
+	Attention : compression d’images avec ou sans perte d’information
+JP2K est capable des deux
+JPEG seulement avec perte
+Données déjà compressées avec perte, une transformation vers un dialecte sans perte risque de ne pas être explicite
+Marquage défini dans le standard, mais respecté ?
+}
+
+\frame
+{
+	\frametitle{Pixels DICOM}
+	\begin{itemize}
+		\item 
+		\item 
+		\item 
+		\item 
+		\item 
+	\end{itemize}
+	Standard informatique générique : couleurs (aussi échelles de gris) encodées sur 8 bit
+8 bit ? 2? = 256 valeurs
+Pas assez pour le médical
+En DICOM, c’est commun qu’un pixel soit encodé sur 10 ou plus bits d’information
+10 bit ? 2?? = 1024 valeurs
+11 bit ? 2?? = 2048 valeurs
+Analogie : écrans à haute densité en commerce...
+	
+}
+
+\frame
+{
+	\frametitle{Autres formats}
+	\begin{itemize}
+		\item 
+		\item 
+		\item 
+		\item 
+		\item 
+	\end{itemize}
+	Passage à d’autres formats possible
+Perte d’information
+Méta-informations : possibles dans d’autres formats, mais pas standardisées...
+Pixels : formats avec perte d’information par définition
+JPEG
+Retour vers le DICOM possible aussi
+Perte d’information
+Récupération pratiquement impossible
+}
+
+\frame
+{
+	\frametitle{Que des pixels?}
+	\begin{itemize}
+		\item
+		\item
+		\item
+		\item
+		\item
+	\end{itemize}
+	DICOM ou autres sans meta-informations
+Pratiquement inutilisable
+Ok pour le patient...
+Manque de contexte spatial, reconstructions impossibles
+SC : Secondary Capture
+Type d’image DICOM dédié aux prises d’écran, les rapports...
+Les images importées !
+}
+
+\frame
+{
+	\frametitle{Anonymisation}
+	\begin{itemize}
+		\item
+		\item
+		\item
+		\item
+		\item
+	\end{itemize}
+	Utilisation d’images cliniques pour l’enseignement
+Fichiers mis à disposition du public
+Nécessité d’anonymat 
+}
+
+\frame
+{
+	\frametitle{En pratique}
+	\begin{itemize}
+		\item
+		\item
+		\item
+		\item
+		\item
+	\end{itemize}
+	Suppression des informations personnelles permettant de remonter au nom du patient
+PatientsName (0010,0010)
+PatientID (0010,0020)
+PatientBirthDate (0010,0030)
+Type 1, donc remplacer, pas supprimer
+ReferringPhysicianName (0008,0090)
+Plein d’autres champs...
+Dans l’extrème, on devrait aussi modifier les images afin de cacher les traits reconnaissables
+}
+
+\frame
+{
+	\frametitle{Données propriétaires}
+	\begin{itemize}
+		\item
+		\item
+		\item
+		\item
+		\item
+	\end{itemize}
+	
+	Rappel : tag = 4 octets, 2 octets groupe, 2 élément
+Groupes avec valeur pair : standard DICOM
+Groupes avec valeur impair : liberté pour le constructeur
+Données personnelles dans les groupes impair?
+Anonymisation impossible à prévoir
+}
+
+\frame
+{
+	\frametitle{Outils DICOM}
+	\begin{itemize}
+		\item
+		\item
+		\item
+		\item
+		\item
+	\end{itemize}
+	Généralement, les logiciels font tout le nécessaire
+Possibilité de utilisation experts
+Logiciels plus techniques
+DCMTK : storescp, movescu, findscu, echoscu, dcmdump, dcm2pdf, pdf2dcm, ...
+dicom3tools : dciodvfy, dcentvfy, ...
+Programmation
+DCMTK
+DCM4CHE
+Papyrus, MATLAB, autres...
+}
+
+\section{Conclusions}
+\frame
+{
+	\frametitle{Prévoir plutôt que subir}
+	\begin{itemize}
+		\item
+		\item
+		\item
+		\item
+		\item
+	\end{itemize}
+	
+	Soumission appel d’offres avant l’achat
+Définition du scénario de travail souhaité
+Ex : les images brutes exportées pourront être ré-utilisées à posteriori
+Rédaction du cahier des charges DICOM
+Préciser le niveau d’exigence de DICOM
+Faire appel à un consultant ou à des collègues
+Acquérir le savoir-faire en interne
+Demander le Document de Conformité DICOM
+}
+
+\frame
+{
+	\frametitle{Recette}
+	\begin{itemize}
+		\item
+		\item
+		\item
+		\item
+		\item
+	\end{itemize}
+	Acceptation protocolée
+Vérification de DICOM ET du scénario requis
+Tests
+}
+
+\frame
+{
+	\frametitle{Services à demander}
+	\begin{itemize}
+		\item
+		\item
+		\item
+		\item
+		\item
+	\end{itemize}
+	
+	Services DICOM pour le scanner:
+Worklist (SCU) : Import de la liste de patients
+Store : envoi des images par réseau
+Envoi : modalités (SCU): CT
+Réception (SCP) : CT, IRM
+Print (SCU) : envoi des images pour impression
+}
+
+\frame
+{
+	\frametitle{Équipement non standard}
+	Comment intégrer dans DICOM ?
+	\begin{itemize}
+		\item Installer une passerelles de conversion
+		\item Capable d’interpréter la donnée fournie
+		\item Lien avec la worklist
+	\end{itemize}
+	
+	
+
+
+Limitation
+Secondary Capture...
+Données d’acquisition perdues
+}
+
+\frame
+{
+	\frametitle{Conclusion}
+	\begin{itemize}
+		\item Prévoir DICOM dès l’achat de l’équipement…
+		\item … même si utilisation différée de l’export des images.
+		\item Supplément de prix inférieur à un achat à d’options \emph{a posteriori}.
+	\end{itemize}
+}
+
+\frame
+{
+	\frametitle{}
+}
+
+\frame
+{
+	\frametitle{}
+}
+
+\frame
+{
+	\frametitle{}
+}

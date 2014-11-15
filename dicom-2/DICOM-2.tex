@@ -1,0 +1,53 @@
+\documentclass{beamer}
+
+\usetheme{Boadilla}
+
+\usepackage{amsmath}
+\usepackage[francais]{babel}
+\usepackage[applemac]{inputenc}
+\usepackage{tabularx}
+
+\usepackage[boxed]{algorithm2e}
+\usepackage{multimedia}
+\usepackage{pgfpages}
+
+\usenavigationsymbolstemplate{}
+
+
+\setbeamertemplate{footline}[frame number,logo]
+
+
+\title{DICOM II}
+\subtitle{Cours HEdS Genève}
+\author[B. Deville]{Beno\^it Deville – Analyste programmeur}
+\date{Décembre 2013}
+
+\begin{document}
+
+\frame{\titlepage}
+
+% outline
+\section*{Plan}
+\frame
+{
+  \frametitle{Plan}
+  \tableofcontents
+}
+
+% repeat outline at each section
+\AtBeginSection[] % Do nothing for \section*
+{
+      \begin{frame}<beamer>
+         \frametitle{Rappel du plan}
+         \tableofcontents[currentsection]
+      \end{frame}
+}
+
+\input{sections/rappels}
+\input{sections/notions}
+\input{sections/fichier}
+\input{sections/services}
+\input{sections/utilisation}
+\input{sections/conclusion}
+
+\end{document}

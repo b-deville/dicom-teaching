@@ -1,0 +1,61 @@
+\section{Fichier DICOM}
+
+\frame
+{
+	\frametitle{Conventions DICOM}
+	\begin{itemize}
+		\item Single Frame
+		\begin{itemize}
+			\item Une image : stockée dans un fichier.
+			\item Une coupe = une image
+		
+			$\Rightarrow$ série de 100 coupes = 100 fichiers.
+		\end{itemize}
+		\item Multiframe
+		\begin{itemize}
+			\item Aussi appelé \emph{Enhanced DICOM}.
+			\item Plusieurs images dans la même séquence.
+			
+			E.g. séquence vidéo d'échographie.
+		\end{itemize}
+		\item Arborescence des répertoires/fichiers
+		\begin{center}
+			\includegraphics[width=.8\linewidth]{./figures/arborescence.png}
+		\end{center}
+
+	\end{itemize}
+}
+
+\frame
+{
+	\frametitle{Fichier en pratique}
+	
+	\begin{itemize}
+		\item Peut être expédié par messagerie.
+		\item Convertible en d'autres formats (JPEG, AVI, etc.)
+		\item Extenstion : .dcm
+		\item Exemple avec OsiriX.
+	\end{itemize}
+}
+
+\frame
+{
+	\frametitle{Contenu d'un fichier .dcm}
+	
+	Un fichier DICOM est l'agrégation des éléments suivants :
+	\begin{itemize}
+		\item Pré-entête :
+		\begin{itemize}
+			\item Préambule : 128 octets de données "application".
+			\item Préfixe : 0x4449434D=DICM (4 octets).
+		\end{itemize}
+		\item Suite de Data Elements.
+		En général :
+		\begin{itemize}
+			\item Tag ;
+			\item VR ;
+			\item Taille ;
+			\item et Valeur.
+		\end{itemize}
+	\end{itemize}
+}

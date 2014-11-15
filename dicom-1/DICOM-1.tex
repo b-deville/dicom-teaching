@@ -1,0 +1,48 @@
+\documentclass{beamer}
+
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+%\usepackage[macapple]{inputenc}
+\usepackage{soul}
+
+\usetheme{Boadilla}
+\setbeamertemplate{footline}[frame number,logo]
+\usenavigationsymbolstemplate{}
+
+\title{DICOM}
+\subtitle{Cours HEdS Gen\`eve}
+\author[B. Deville]{Beno\^it Deville}
+\date{Novembre 2014}
+
+\begin{document}
+
+\frame{\titlepage}
+
+% outline
+\section*{Plan}
+\frame
+{
+  \frametitle{Plan}
+  \tableofcontents
+}
+
+% repeat outline at each section
+\AtBeginSection[] % Do nothing for \section*
+{
+      \begin{frame}<beamer>
+         \frametitle{Rappel du plan}
+         \tableofcontents[currentsection]
+      \end{frame}
+}
+
+\input{sections/1-notions}
+\input{sections/2-histoire}
+\input{sections/3-principes}
+\input{sections/4-objets}
+\input{sections/5-services}
+\input{sections/6-conclusion}
+%\input{sections/7-representation}
+%\input{sections/8-annexes}
+
+\end{document}

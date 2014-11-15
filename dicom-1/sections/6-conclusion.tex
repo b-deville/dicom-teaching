@@ -1,0 +1,96 @@
+\section{Conclusions}
+
+\frame
+{
+	\frametitle{Points forts}
+	\begin{itemize}
+		\item Standard complet et évolutif :
+		\begin{itemize}
+			\item Pas limité à la radiologie (oncologie, hématologie, dermatologie, ophtalmologie, cardiologie, ORL,?).
+			\item Annotations sur les images, compression.
+		\end{itemize}
+		\item Liberté du choix d'achat d'équipement car indépendance du fournisseur.
+		\item Distribution d'images possible : support des protocoles de communication standards, TCP/IP notamment.
+	\end{itemize}
+}
+
+\frame
+{
+	\frametitle{Points faibles}
+	\begin{itemize}
+		\item Complexe :
+		\begin{itemize}
+			\item Difficile à comprendre.
+			\item Informatique de niche.
+		\end{itemize}
+		\item Nécessité de patience : intégration progressive par les fournisseurs.
+		\item Périmètre limité : traite de la connectivité, mais pas des fonctionnalités des logiciels.
+		\item Besoin d'un niveau de conformité.
+	\end{itemize}
+}
+
+\frame
+{
+	\frametitle{DICOM Conformance}
+	\begin{itemize}
+		\item Le standard prévoit un document "DICOM Conformance Statement" dont le plan et la structure sont prédéfinis.
+		\item Par ce document, le fournisseur précise le niveau de conformité de son équipement à la norme DICOM.
+		\begin{itemize}
+			\item Applicable sur chaque modèle, chaque version.
+			\item Le document suit un plan prévu dans la norme.
+			\item Liste des SOP Class supportées et des rôles assurés (SCU, SCP).
+		\end{itemize}
+	\end{itemize}
+}
+
+\frame
+{
+	\frametitle{Pièges et difficultés}
+	\begin{itemize}
+		\item Divergences/erreurs d'interprétation de la norme.
+		\item DICOM autorise le stockage d'informations spécifiques.
+		\begin{itemize}
+			\item Risque: faire du propriétaire sous le label DICOM
+		\end{itemize}
+		\item DICOM propose différentes alternatives pour décrire l'information.
+		\begin{itemize}
+			\item Annotations: 3 moyens de les transmettre.
+		\end{itemize}
+		\item Manque d'information disponible à l'installation sur l'activation des services DICOM.
+	\end{itemize}
+}
+
+\frame
+{
+	\frametitle{Quelques contre-vérités}
+	\begin{itemize}
+		\item "Je n'arrive plus à envoyer mes images. C'est à cause de DICOM !"
+		\begin{description}
+			\item[Faux] DICOM utilise le réseau, qui peut avoir ses défaillances.
+		\end{description}
+		\item "DICOM dégrade la qualité de mes images."
+		\begin{description}
+			\item[Ne veut pas dire grand chose] DICOM n'invente rien : il repose sur des formats d'image qui peuvent ou non êtres compressés.
+		\end{description}
+		\item "Ne vous inquiétez pas, je supporte entièrement DICOM"
+		\begin{description}
+			\item[Faux] Remarque bien présomptueuse?
+			Possible, mais est-ce réaliste ?
+		\end{description}
+	\end{itemize}
+}
+
+\frame
+{
+	\frametitle{Synthèse}
+	\begin{itemize}
+		\item Norme incontournable.
+		\item Très largement et rapidement adoptée par la majorité des acteurs.
+		\item Plus large couverture que l'imagerie radiologique
+		\begin{itemize}
+			\item Rapport structuré.
+			\item Ouverture à toutes les imageries.
+		\end{itemize}
+		\item Norme évolutive.
+	\end{itemize}
+}
