@@ -57,27 +57,33 @@
 		
 		Le traitement DICOM d'une information consiste alors \`a regrouper :
 		\begin{itemize}
-			\item un \emph{Objet}, contenant les informations, se conformant \`a une \emph{Information Object Definition} (ou \emph{IOD}) ;
-			\item et une fonction sp\'ecifique, ou \emph{Service}, se conformant \`a un \emph{DICOM Message Service Element}, ou \emph{DIMSE}.
+			\item l'\emph{Information Objet}, contenant les donn\'ees de l'objet, respectant une \emph{Information Object Definition} (ou \emph{IOD}) ;
+			\item et une fonction sp\'ecifique, ou \emph{Service}, d\'efini par un \emph{DICOM Message Service Element}, ou \emph{DIMSE}.
 		\end{itemize}
 	}
 	
 	\frame
 	{
-		\frametitle{SOP Class UID}		
+		\frametitle{SOP Class UID}
 
-		La combinaison Objet + Service est :
 		\begin{itemize}
-			\item appel\'ee \emph{Service/Object Pair} ou \emph{SOP} ;
-			\item l'\'el\'ement principal de la conformit\'e au standard ;
-			\item identifi\'ee par un identifiant unique nomm\'e \emph{SOP Class UID}.
-		\end{itemize}
+			\item La combinaison Information Objet + Service est :
+			\begin{itemize}
+				\item appel\'ee \emph{Service/Object Pair} ou \emph{SOP} ;
+				\item l'\'el\'ement principal de la conformit\'e au standard ;
+				\item identifi\'ee par un identifiant unique nomm\'e \emph{SOP Class UID}.
+			\end{itemize}
 		
-		Exemples de SOP Class UID :
-		\begin{description}
-			\item[$1.2.840.10008.5.1.4.1.1.1$] CR Image Store (sauvegarder  une image CR) ;
-			\item[$1.2.840.10008.5.1.4.1.1.2$] CT Image Store (sauvegarder  un CT).
-		\end{description}
+			\item Standard DICOM = annuaire de SOP.\\
+			SOP Class UID = num\'ero unique pour trouver \`a quelle paire correspond un objet DICOM.\\
+			Analogies : num\'ero AVS, adresse IP,\ldots
+
+			\item Exemples de SOP Class UID :
+			\begin{description}
+				\item[$1.2.840.10008.5.1.4.1.1.1$] CR Image Store (enregistrer un CR) ;
+				\item[$1.2.840.10008.5.1.4.1.1.2$] CT Image Store (enregistrer un CT).
+			\end{description}
+		\end{itemize}
 	}
 	
 	\frame
@@ -87,3 +93,4 @@
 			\includegraphics[width=\linewidth]{./figures/sop-definition.png}
 		\end{center}		
 	}
+

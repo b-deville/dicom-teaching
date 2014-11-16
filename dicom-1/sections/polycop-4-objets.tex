@@ -3,7 +3,7 @@
 \frame
 {
  	\frametitle{Information Object Definition}
-  	L'IOD d\'etermine les attributs d\'ecrivant un objet.
+  	L'IOD d\'etermine, pour un IO sp\'ecifique, quelles sont les valeurs qu'on doit ou peut trouver dans l'objet.
   	\begin{description}
     		\item[Normalized IOD]~\\
 			Repr\'esente une entit\'e unique du monde r\'eel (patient, visite, examen, r\'esultat, interpr\'etation,\ldots).
@@ -20,13 +20,13 @@
  	\frametitle{IOD composite}
  	\begin{itemize}
 		\item IOD compos\'es d'\emph{Information Entities} ou \emph{IE}.
-   		\item Une IE comporte un ou plusieurs \emph{Modules}.
+   		\item Une IE comporte un ou plusieurs \emph{Modules} (= ensemble de valeurs li\'ees).
 		\begin{description}
 			\item[Mandatory] Module obligatoire.
 			\item[Conditinal] Module conditionnel (obligatoire selon certaines conditions).
 			\item[User Option] Module optionnel.
 		\end{description}
-   		\item Les modules sont compos\'es d'attributs de diff\'erents types ;
+   		\item Les modules sont compos\'es d'\emph{Attributs} (= valeurs) de diff\'erents types ;
 		\begin{description}
 			\item[1] Obligatoire.
 			\item[2] Obligatoire - peut \^etre vide.
@@ -46,11 +46,20 @@
 
 \frame
 {
+	\frametitle{Information Object Defintion (IOD)}
+	
+	\begin{center}
+		\includegraphics[width=\linewidth]{./figures/IO-definition.png}
+	\end{center}
+}
+
+\frame
+{
 	\frametitle{Objet}
 	\begin{itemize}
-		\item Terminologie : objet = Data Set
+		\item Terminologie : objet = Data Set (= ensemble de donn\'ees).
 		\item Un Data Set est compos\'e de Data Elements.
-		\item Chaque Data Element d\'ecrit un attribut de l'IOD.
+		\item Chaque Data Element instancie un attribut de l'IOD.
 		\item Data Element
 		\begin{itemize}
 			\item Étiquette d'identification (\emph{Tag}) contenant deux num\'eros.
@@ -97,3 +106,4 @@
 		\item Les d\'etails au prochain cours.
 	\end{itemize}
 }
+
