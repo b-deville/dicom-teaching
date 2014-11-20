@@ -3,12 +3,15 @@
 \frame
 {
  	\frametitle{Information Object Definition}
-  	L'IOD d\`etermine les attributs d\`ecrivant un objet.
+  	L'IOD d\'etermine, pour un IO sp\'ecifique, quelles sont les valeurs qu'on doit ou peut trouver dans l'objet.
   	\begin{description}
-    	\item[Normalized IOD] Repr\`esente une entit\`e unique du monde r\`eel (patient, visite, examen, r\`esultat, interpr\`etation,\ldots).
-		Rarement appliqu\`e en pratique : cause complexit\`e et perte de performance.
-    	\item[Composite IOD] Repr\`esente certains d\`etails de plusieurs objets du monde r\`eel et les relations entre ces objets (nom du patient, date de l'examen,\ldots)
-		\item[Attributes] Les attributs d'un IOD d\`ecrivent les propri\`et\`es d'un \`el\`ement (instance d'un objet) du monde r\`eel.
+    		\item<2->[Normalized IOD]~\\
+			Repr\'esente une entit\'e unique du monde r\'eel (patient, visite, examen, r\'esultat, interpr\'etation,\ldots).
+			Rarement appliqu\'e en pratique : cause complexit\'e et perte de performance.
+    		\item<3->[Composite IOD]~\\
+			Repr\'esente certains d\'etails de plusieurs objets du monde r\'eel et les relations entre ces objets (nom du patient, date de l'examen,\ldots)
+		\item<4->[Attributes]~\\
+			Les attributs d'un IOD d\'ecrivent les propri\'et\'es d'un \'el\'ement (instance d'un objet) du monde r\'eel.
   	\end{description}
 }
 
@@ -16,19 +19,19 @@
 {
  	\frametitle{IOD composite}
  	\begin{itemize}
-		\item IOD compos\`es d'\emph{Information Entities} ou \emph{IE}.
-   		\item Une IE comporte un ou plusieurs \emph{Modules}.
+		\item<1-> IOD compos\'es d'\emph{Information Entities} ou \emph{IE}.
+   		\item<2-> Une IE comporte un ou plusieurs \emph{Modules} (= ensemble de valeurs li\'ees).
 		\begin{description}
-			\item[Mandatory] Module obligatoire.
-			\item[Conditinal] Module conditionnel (obligatoire selon certaines conditions).
-			\item[User Option] Module optionnel.
+			\item<3->[Mandatory] Module obligatoire.
+			\item<4->[Conditional] Module conditionnel (obligatoire selon certaines conditions).
+			\item<5->[User Option] Module optionnel.
 		\end{description}
-   		\item Les modules sont compos\`es d'attributs de diff\`erents types ;
+   		\item<6-> Les modules sont compos\'es d'\emph{Attributs} (= valeurs).
 		\begin{description}
-			\item[1] Obligatoire.
-			\item[2] Obligatoire - peut \^etre vide.
-			\item[3] Optionnel.
-			\item[<1/2>C] Conditionnel.
+			\item<7->[1] Obligatoire.
+			\item<8->[2] Obligatoire - peut \^etre vide.
+			\item<9->[3] Optionnel.
+			\item<10->[<1/2>C] Conditionnel.
 		\end{description}
  	\end{itemize}
 	En pratique, un objet DICOM est presque toujours une instance d'un IOD composite.
@@ -43,17 +46,26 @@
 
 \frame
 {
+	\frametitle{Information Object Defintion (IOD)}
+	
+	\begin{center}
+		\includegraphics[width=\linewidth]{./figures/IO-definition.png}
+	\end{center}
+}
+
+\frame
+{
 	\frametitle{Objet}
 	\begin{itemize}
-		\item Terminologie : objet = Data Set
-		\item Un Data Set est compos\`e de Data Elements.
-		\item Chaque Data Element d\`ecrit un attribut de l'IOD.
-		\item Data Element
+		\item<1-> Terminologie : objet = Data Set (= ensemble de donn\'ees).
+		\item<2-> Un Data Set est compos\'e de Data Elements.
+		\item<3-> Chaque Data Element instancie un attribut de l'IOD.
+		\item<4-> Data Element
 		\begin{itemize}
-			\item Étiquette d'identification (\emph{Tag}) contenant deux num\`eros.
-			\item Type (\emph{VR} = \emph{Value Representation}).
-			\item Taille de la valeur.
-			\item Valeur.
+			\item<5-> Étiquette d'identification (\emph{Tag}) contenant deux num\'eros.
+			\item<6-> Type (\emph{VR} = \emph{Value Representation}).
+			\item<7-> Taille de la valeur.
+			\item<8-> Valeur.
 		\end{itemize}
 	\end{itemize}
 }
@@ -88,9 +100,10 @@
 	\begin{itemize}
 		\item Encapsuler l'ensemble des objets dans un fichier.
 		\begin{itemize}
-			\item Ent\^ete : pr\`e-ent\^ete et objets.
-			\item Image : donn\`ees brutes de l'image.
+			\item<2-> Ent\^ete : pr\'e-ent\^ete et objets.
+			\item<3-> Image : donn\'ees brutes de l'image.
 		\end{itemize}
-		\item Les d\`etails au prochain cours.
+		\item<4-> Les d\'etails au prochain cours.
 	\end{itemize}
 }
+

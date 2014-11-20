@@ -6,11 +6,11 @@
 	\begin{itemize}
 		\item Standard complet et \'evolutif :
 		\begin{itemize}
-			\item Pas limit\'e \`a la radiologie (oncologie, h\'ematologie, dermatologie, ophtalmologie, cardiologie, ORL,\ldots).
-			\item Annotations sur les images, compression.
+			\item<2-> Pas limit\'e \`a la radiologie (oncologie, h\'ematologie, dermatologie, ophtalmologie, cardiologie, ORL,\ldots).
+			\item<3-> Annotations sur les images, compression.
 		\end{itemize}
-		\item Libert\'e du choix d'achat d'\'equipement car ind\'ependance du fournisseur.
-		\item Distribution d'images possible : support des protocoles de communication standards, TCP/IP notamment.
+		\item<4-> Libert\'e du choix d'achat d'\'equipement car ind\'ependance du fournisseur.
+		\item<5-> Distribution d'images possible : support des protocoles de communication standards, TCP/IP notamment.
 	\end{itemize}
 }
 
@@ -20,12 +20,12 @@
 	\begin{itemize}
 		\item Complexe :
 		\begin{itemize}
-			\item Difficile \`a comprendre.
-			\item Informatique de niche.
+			\item<2-> Difficile \`a comprendre.
+			\item<3-> Informatique de niche.
 		\end{itemize}
-		\item N\'ecessit\'e de patience : int\'egration progressive par les fournisseurs.
-		\item P\'erim\`etre limit\'e : traite de la connectivit\'e, mais pas des fonctionnalit\'es des logiciels.
-		\item Besoin d'un niveau de conformit\'e.
+		\item<4-> N\'ecessit\'e de patience : int\'egration progressive par les fournisseurs.
+		\item<5-> P\'erim\`etre limit\'e : traite de la connectivit\'e, mais pas des fonctionnalit\'es des logiciels.
+		\item<6-> Besoin d'un niveau de conformit\'e.
 	\end{itemize}
 }
 
@@ -34,11 +34,11 @@
 	\frametitle{DICOM Conformance}
 	\begin{itemize}
 		\item Le standard pr\'evoit un document "DICOM Conformance Statement" dont le plan et la structure sont pr\'ed\'efinis.
-		\item Par ce document, le fournisseur pr\'ecise le niveau de conformit\'e de son \'equipement \`a la norme DICOM.
+		\item<2-> Par ce document, le fournisseur pr\'ecise le niveau de conformit\'e de son \'equipement au standard DICOM.
 		\begin{itemize}
-			\item Applicable sur chaque mod\`ele, chaque version.
-			\item Le document suit un plan pr\'evu dans la norme.
-			\item Liste des SOP Class support\'ees et des r\^oles assur\'es (SCU, SCP).
+			\item<3-> Applicable sur chaque mod\`ele, chaque version.
+			\item<4-> Le document suit un plan pr\'evu dans le standard.
+			\item<5-> Liste des SOP Class support\'ees et des r\^oles assur\'es (SCU, SCP).
 		\end{itemize}
 	\end{itemize}
 }
@@ -47,16 +47,16 @@
 {
 	\frametitle{Pi\`eges et difficult\'es}
 	\begin{itemize}
-		\item Divergences/erreurs d'interpr\'etation de la norme.
-		\item DICOM autorise le stockage d'informations sp\'ecifiques.
+		\item Divergences/erreurs d'interpr\'etation du standard.
+		\item<2-> DICOM autorise le stockage d'informations sp\'ecifiques.
 		\begin{itemize}
-			\item Risque: faire du propri\'etaire sous le label DICOM
+			\item<3-> Risque: faire du propri\'etaire sous le label DICOM
 		\end{itemize}
-		\item DICOM propose diff\'erentes alternatives pour d\'ecrire l'information.
+		\item<4-> DICOM propose diff\'erentes alternatives pour d\'ecrire l'information.
 		\begin{itemize}
-			\item Annotations: 3 moyens de les transmettre.
+			\item<5-> Annotations: 3 moyens de les transmettre.
 		\end{itemize}
-		\item Manque d'information disponible \`a l'installation sur l'activation des services DICOM.
+		\item<6-> Manque d'information disponible \`a l'installation sur l'activation des services DICOM.
 	\end{itemize}
 }
 
@@ -66,15 +66,15 @@
 	\begin{itemize}
 		\item "Je n'arrive plus \`a envoyer mes images. C'est \`a cause de DICOM !"
 		\begin{description}
-			\item[Faux] DICOM utilise le r\'eseau, qui peut avoir ses d\'efaillances.
+			\item<2->[Faux] DICOM utilise le r\'eseau, qui peut avoir ses d\'efaillances.
 		\end{description}
-		\item "DICOM d\'egrade la qualit\'e de mes images."
+		\item<3-> "DICOM d\'egrade la qualit\'e de mes images."
 		\begin{description}
-			\item[Ne veut pas dire grand chose] DICOM n'invente rien : il repose sur des formats d'image qui peuvent ou non \^etres compress\'es.
+			\item<4->[Faux] DICOM n'invente rien : il repose sur des formats d'image qui peuvent ou non \^etres compress\'es.
 		\end{description}
-		\item "Ne vous inqui\'etez pas, je supporte enti\`erement DICOM"
+		\item<5-> "Ne vous inqui\'etez pas, je supporte enti\`erement DICOM"
 		\begin{description}
-			\item[Faux] Remarque bien pr\'esomptueuse?
+			\item<6->[Faux] Remarque bien pr\'esomptueuse\ldots
 			Possible, mais est-ce r\'ealiste ?
 		\end{description}
 	\end{itemize}
@@ -84,13 +84,14 @@
 {
 	\frametitle{Synth\`ese}
 	\begin{itemize}
-		\item Norme incontournable.
-		\item Tr\`es largement et rapidement adopt\'ee par la majorit\'e des acteurs.
-		\item Plus large couverture que l'imagerie radiologique
+		\item<1-> Standard incontournable.
+		\item<2-> Tr\`es largement et rapidement adopt\'ee par la majorit\'e des acteurs.
+		\item<3-> Plus large couverture que l'imagerie radiologique
 		\begin{itemize}
-			\item Rapport structur\'e.
-			\item Ouverture \`a toutes les imageries.
+			\item<4-> Rapport structur\'e.
+			\item<5-> Ouverture \`a toutes les imageries.
 		\end{itemize}
-		\item Norme \'evolutive.
+		\item<6-> Standard \'evolutif.
 	\end{itemize}
 }
+
