@@ -4,9 +4,9 @@
 {
 	\frametitle{Anonymisation}
 	\begin{itemize}
-		\item Utilisation d’images cliniques pour la recherche ou l’enseignement.
+		\item Utilisation d'images cliniques pour la recherche ou l'enseignement.
 		\item Fichiers mis \`a disposition du public.
-		\item N\'ecessit\'e d’anonymat : suppression des informations personnelles permettant d'identifier le patient.
+		\item N\'ecessit\'e d'anonymat : suppression des informations personnelles permettant d'identifier le patient.
 		\begin{itemize}
 			\item PatientsName (0010,0010)
 			\item PatientID (0010,0020)
@@ -15,6 +15,7 @@
 			$\rightarrow$ de type 1 : \`a remplacer, pas supprimer !
 			\item ReferringPhysicianName (0008,0090)
 			\item etc.
+			\item Potentiellement plus de 250 champs \`a supprimer ou vider !
 		\end{itemize}
 	\end{itemize}
 }
@@ -23,25 +24,25 @@
 {
 	\frametitle{Achat d'un \'equipement}
 	\begin{enumerate}
-		\item Avant l'achat : soumission de l'appel d'offre :
+		\item Avant l'achat, soumission de l'appel d'offre :
 		\begin{itemize}
 			\item D\'efinition du sc\'enario de travail souhait\'e.
 			
 			Exemple : les images brutes export\'ees pourront \^etre r\'eutilis\'ees a posteriori.
 			\item R\'edaction du cahier des charges DICOM.
 			\begin{itemize}
-				\item Pr\'eciser le niveau d’exigence de DICOM.
+				\item Pr\'eciser le niveau d'exigence de DICOM.
 				
-				$\rightarrow$ faire appel \`a un consultant ou \`a des coll\'egues,
+				$\rightarrow$ faire appel \`a un consultant ou \`a des coll\`egues,
 				
 				$\rightarrow$ ou acqu\'erir le savoir-faire en interne.
-				\item Demander le Document de Conformit\'e DICOM.
+				\item Demander le Document de Conformit\'e DICOM (DICOM Conformance Statement).
 			\end{itemize}
 		\end{itemize}
 		\item Acceptation protocol\'ee.
 		\begin{itemize}
 			\item V\'erification de DICOM.
-			\item V\'erification des du sc\'enarios requis.
+			\item V\'erification du/des sc\'enario/ii requis.
 			\item Tests.
 		\end{itemize}
 	\end{enumerate}
@@ -64,6 +65,11 @@
 
 \frame
 {
+	\frametitle{Exemple de DICOM Conformance Statement}
+}
+
+\frame
+{
 	\frametitle{Services \`a demander}
 	Exemples typiques de services DICOM \`a exiger pour un scanner :
 	\begin{itemize}
@@ -79,6 +85,7 @@
 	\begin{center}
 		\includegraphics[width=\linewidth]{./figures/services-ct.png}
 	\end{center}
+
 }
 
 \frame
@@ -93,12 +100,5 @@
 		\end{center}
 		\item Limitation : images stock\'ees en mode Secondary Capture (IOD le plus simple de DICOM), les donn\'ees d'acquisition des images sont perdues.
 	\end{itemize}
-}
-
-\frame
-{
-	\frametitle{Exemple de DICOM Conformance Statement}
-
-	Exemple tir\'e d'un cas des HUG.
 }
 

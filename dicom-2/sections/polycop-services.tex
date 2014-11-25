@@ -23,9 +23,10 @@
 \frame
 {
 	\frametitle{Services principaux}
-    	\setbeamertemplate{description item}[align left]
+	\setbeamertemplate{description item}[align left]
 	\begin{description}
-		\item[Store]~\\Envoi/stockage d'objets DICOM.
+		\item[Store]~\\
+		Envoi/stockage d'objets DICOM.
 		\item[Query/Retrieve]~\\
 		\begin{itemize}
 			\item Un \'equipement interroge un autre \'equipement.
@@ -35,9 +36,9 @@
 			\end{itemize}
 			\item R\'ecup\'eration d'images/s\'eries/examens selon ces m\^emes crit\`eres.
 		\end{itemize}
-		\item[Modality worklist]~\\ 
+		\item[Modality worklist]~\\
 		\begin{itemize}
-			\item Interrogation d'une modalit\'e au système de planification.
+			\item Interrogation d'une modalit\'e au syst\`eme de planification.
 			\item R\'ecup\'eration de la liste des examens pr\'evus.
 			\item Examens document\'es : identification du patient, proc\'edure, prescripteur.
 		\end{itemize}
@@ -47,12 +48,16 @@
 \frame
 {
 	\frametitle{Autres services}
-    	\setbeamertemplate{description item}[align left]
+	\setbeamertemplate{description item}[align left]
 	\begin{description}
-		\item[Printing]~\\D\'emod\'e depuis les imprimantes PostScript.
-		\item[Storage commitment]~\\Confirmer qu'un objet est stock\'e de mani\`ere permanente.
-		\item[Modality performed procedure step]~\\Permet de diffuser l'information d'avancement d'un examen.
-		\item[Offline media]~\\D\'etails sur le stockage sur support CD, DVD, etc.
+		\item[Printing]~\\
+		D\'emod\'e depuis les imprimantes PostScript.
+		\item[Storage commitment]~\\
+		Confirmer qu'un objet est stock\'e de mani\`ere permanente.
+		\item[Modality performed procedure step]~\\
+		Permet de diffuser l'information d'avancement d'un examen.
+		\item[Offline media]~\\
+		D\'etails sur le stockage sur support CD, DVD, etc.
 	\end{description}
 }
 
@@ -60,7 +65,7 @@
 {
 	\frametitle{Communication}
 	\begin{itemize}
-		\item Chaque \'equipement joue un r\^ole d\'ependant du service
+		\item Chaque \'equipement joue un r\^ole d\'ependant du service :
 		\begin{description}
 			\item[SCU] Service Class User (le client)
 			\item[SCP] Service Class Provider (le serveur)
@@ -78,7 +83,7 @@
 	\frametitle{Changement de r\^ole}
 	Un \'equipement peut changer de r\^ole.
 	
-	Par exemple, une station d'interpr\'etation peut \^etre :
+	Par exemple, une station d'interpr\'etation A peut \^etre :
 	\begin{itemize}
 		\item SCU dans un premier temps :
 		\begin{enumerate}
@@ -93,11 +98,12 @@
 		\end{enumerate}
 	\end{itemize}
 	
-%	\includegraphics<1>[width=\linewidth]{./figures/roles.png}
+	\includegraphics[width=\linewidth]{./figures/roles.png}
 %	\includegraphics<2>[width=\linewidth]{./figures/roles-scu.png}
 %	\includegraphics<3>[width=\linewidth]{./figures/roles-1.png}
 %	\includegraphics<4>[width=\linewidth]{./figures/roles-2.png}
 %	\includegraphics<5>[width=\linewidth]{./figures/roles-scp.png}
 %	\includegraphics<6>[width=\linewidth]{./figures/roles-3.png}
-	\includegraphics[width=\linewidth]{./figures/roles-4.png}
+%	\includegraphics<7>[width=\linewidth]{./figures/roles-4.png}
 }
+
