@@ -3,7 +3,7 @@ Code couleur en fonction de l'importance pour l'examen ?
 DICOM 1 :
 - frise chronologique
   * mettre au premier plan les lignes noires
-  * rajouter une étape de départ "chaos numérique"
 
 DICOM 2 :
-
+- vérifier l’ensemble des slides
+- ajouter l’exemple de DICOM Conformance Statement

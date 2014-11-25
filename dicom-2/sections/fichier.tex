@@ -4,23 +4,23 @@
 {
 	\frametitle{Conventions DICOM}
 	\begin{itemize}
-		\item Single Frame
+		\item<2-> Single Frame
 		\begin{itemize}
-			\item Une image : stock\'ee dans un fichier.
-			\item Une coupe = une image
+			\item<3-> Une image : stock\'ee dans un fichier.
+			\item<4-> Une coupe = une image
 		
 			$\Rightarrow$ s\'erie de 100 coupes = 100 fichiers.
 		\end{itemize}
-		\item Multiframe
+		\item<5-> Multiframe
 		\begin{itemize}
-			\item Aussi appel\'e \emph{Enhanced DICOM}.
-			\item Plusieurs images dans la m\^eme s\'equence.
+			\item<6-> Aussi appel\'e \emph{Enhanced DICOM}.
+			\item<7-> Plusieurs images dans la m\^eme s\'equence.
 			
 			E.g. s\'equence vid\'eo d'\'echographie.
 		\end{itemize}
-		\item Arborescence des r\'epertoires/fichiers
+		\item<8-> Arborescence des r\'epertoires/fichiers
 		\begin{center}
-			\includegraphics[width=.8\linewidth]{./figures/arborescence.png}
+			\includegraphics<9->[width=.8\linewidth]{./figures/arborescence.png}
 		\end{center}
 
 	\end{itemize}
@@ -31,10 +31,10 @@
 	\frametitle{Fichier en pratique}
 	
 	\begin{itemize}
-		\item Peut \^etre exp\'edi\'e par messagerie.
-		\item Convertible en d'autres formats (JPEG, AVI, etc.)
-		\item Extenstion : .dcm
-		\item Exemple avec OsiriX.
+		\item<2-> Peut \^etre exp\'edi\'e par messagerie.
+		\item<3-> Convertible en d'autres formats (JPEG, AVI, etc.)
+		\item<4-> Extenstion : .dcm
+		\item<5-> Exemple avec OsiriX.
 	\end{itemize}
 }
 
@@ -44,18 +44,18 @@
 	
 	Un fichier DICOM est l'agr\'egation des \'el\'ements suivants :
 	\begin{itemize}
-		\item Pr\'e-ent\^ete :
+		\item<2-> Pr\'e-ent\^ete :
 		\begin{itemize}
-			\item Pr\'eambule : 128 octets de donn\'ees "application".
-			\item Pr\'efixe : 0x4449434D=DICM (4 octets).
+			\item<3-> Pr\'eambule : 128 octets de donn\'ees "application".
+			\item<4-> Pr\'efixe : 0x4449434D=DICM (4 octets).
 		\end{itemize}
-		\item Suite de Data Elements.
+		\item<5-> Suite de Data Elements.
 		En g\'en\'eral :
 		\begin{itemize}
-			\item Tag ;
-			\item VR ;
-			\item Taille ;
-			\item et Valeur.
+			\item<6-> Tag ;
+			\item<7-> VR ;
+			\item<8-> Taille ;
+			\item<9-> et Valeur.
 		\end{itemize}
 	\end{itemize}
 }
