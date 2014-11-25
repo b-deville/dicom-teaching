@@ -1,4 +1,5 @@
 Code couleur en fonction de l'importance pour l'examen ?
+Expliquer les différents groupes de tags (groupe,élément), e.g. 0010 = groupe patient
 
 DICOM 1 :
 - frise chronologique
@@ -7,3 +8,5 @@ DICOM 1 :
 DICOM 2 :
 - vérifier l’ensemble des slides
 - ajouter l’exemple de DICOM Conformance Statement
+- clarifier les SCU et SCP
+- SCU/SCP : uniquement station A dans un premier temps

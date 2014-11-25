@@ -5,17 +5,17 @@
 	\frametitle{Services DICOM}
 	
 	\begin{itemize}
-		\item<2-> \'Equivalent des IOD pour les services : DIMSE (DICOM Message Service Element).
-		\item<3-> D\'efinir les op\'erations possibles selon les objets.
-		\item<4-> Deux cat\'egories d'\'el\'ements :
+		\item<1-> \'Equivalent des IOD pour les services : DIMSE (DICOM Message Service Element).
+		\item<2-> D\'efinir les op\'erations possibles selon les objets.
+		\item<3-> Deux cat\'egories d'\'el\'ements :
 		\begin{itemize}
-			\item<5-> op\'erations (par exemple \emph{store}) ;
-			\item<6-> notifications (e.g. \emph{event report}).
+			\item<4-> op\'erations (par exemple \emph{store}) ;
+			\item<5-> notifications (e.g. \emph{event report}).
 		\end{itemize}
-		\item<7-> Services diff\'erents sur les objets composites ou normalis\'es :
+		\item<6-> Services diff\'erents sur les objets composites ou normalis\'es :
 		\begin{description}
-			\item<8->[5 composites] C-STORE\footnote{Op\'eration}, C-FIND$^1$, C-MOVE$^1$, C-GET$^1$, C-ECHO$^1$.
-			\item<9->[6 normalis\'es] N-GET$^1$, N-ACTION$^1$, N-SET$^1$, N-CREATE$^1$, N-DELETE$^1$, N-EVENT-REPORT\footnote{Notification}.
+			\item<7->[5 composites] C-STORE\footnote{Op\'eration}<7->, C-FIND$^1$, C-MOVE$^1$, C-GET$^1$, C-ECHO$^1$.
+			\item<8->[6 normalis\'es] N-GET$^1$, N-ACTION$^1$, N-SET$^1$, N-CREATE$^1$, N-DELETE$^1$, N-EVENT-REPORT\footnote{Notification}<8->.
 		\end{description}
 	\end{itemize}
 }
@@ -23,9 +23,11 @@
 \frame
 {
 	\frametitle{Services principaux}
+	\setbeamertemplate{description item}[align left]
 	\begin{description}
-		\item<2->[Store] Envoi/stockage d'objets DICOM.
-		\item<3->[Query/Retrieve]
+		\item<2->[Store]~\\
+		Envoi/stockage d'objets DICOM.
+		\item<3->[Query/Retrieve]~\\
 		\begin{itemize}
 			\item<4-> Un \'equipement interroge un autre \'equipement.
 			\item<5-> Interrogation par crit\`eres \`a diff\'erents niveaux (e.g. patient, examen, s\'erie, image) :
@@ -34,7 +36,7 @@
 			\end{itemize}
 			\item<7-> R\'ecup\'eration d'images/s\'eries/examens selon ces m\^emes crit\`eres.
 		\end{itemize}
-		\item<8->[Modality worklist] 
+		\item<8->[Modality worklist]~\\
 		\begin{itemize}
 			\item<9-> Interrogation d'une modalit\'e au syst\`eme de planification.
 			\item<10-> R\'ecup\'eration de la liste des examens pr\'evus.
@@ -46,11 +48,16 @@
 \frame
 {
 	\frametitle{Autres services}
+	\setbeamertemplate{description item}[align left]
 	\begin{description}
-		\item<2->[Printing] D\'emod\'e depuis les imprimantes PostScript.
-		\item<3->[Storage commitment] Confirmer qu'un objet est stock\'e de mani\`ere permanente.
-		\item<4->[Modality performed procedure step] Permet de diffuser l'information d'avancement d'un examen.
-		\item<5->[Offline media] D\'etails sur le stockage sur support CD, DVD, etc.
+		\item<1->[Printing]~\\
+		D\'emod\'e depuis les imprimantes PostScript.
+		\item<2->[Storage commitment]~\\
+		Confirmer qu'un objet est stock\'e de mani\`ere permanente.
+		\item<3->[Modality performed procedure step]~\\
+		Permet de diffuser l'information d'avancement d'un examen.
+		\item<4->[Offline media]~\\
+		D\'etails sur le stockage sur support CD, DVD, etc.
 	\end{description}
 }
 
@@ -58,16 +65,16 @@
 {
 	\frametitle{Communication}
 	\begin{itemize}
-		\item<2-> Chaque \'equipement joue un r\^ole d\'ependant du service
+		\item<1-> Chaque \'equipement joue un r\^ole d\'ependant du service :
 		\begin{description}
-			\item<3->[SCU] Service Class User (le client)
-			\item<4->[SCP] Service Class Provider (le serveur)
+			\item<2->[SCU] Service Class User (le client)
+			\item<3->[SCP] Service Class Provider (le serveur)
 		\end{description}
-		\item<5-> Le SCU initie une demande, le SCP r\'epond.
+		\item<4-> Le SCU initie une demande, le SCP r\'epond.
 	\end{itemize}
 	
 	\begin{center}
-		\includegraphics<6->[width=.8\linewidth]{./figures/scu-scp.png}
+		\includegraphics<5->[width=.8\linewidth]{./figures/scu-scp.png}
 	\end{center}
 }
 
@@ -76,7 +83,7 @@
 	\frametitle{Changement de r\^ole}
 	Un \'equipement peut changer de r\^ole.
 	
-	Par exemple, une station d'interpr\'etation peut \^etre :
+	Par exemple, une station d'interpr\'etation A peut \^etre :
 	\begin{itemize}
 		\item<2-> SCU dans un premier temps :
 		\begin{enumerate}
@@ -91,11 +98,12 @@
 		\end{enumerate}
 	\end{itemize}
 	
-	\includegraphics<1>[width=\linewidth]{./figures/roles.png}
+%	\includegraphics[width=\linewidth]{./figures/roles.png}
 	\includegraphics<2>[width=\linewidth]{./figures/roles-scu.png}
 	\includegraphics<3>[width=\linewidth]{./figures/roles-1.png}
 	\includegraphics<4>[width=\linewidth]{./figures/roles-2.png}
 	\includegraphics<5>[width=\linewidth]{./figures/roles-scp.png}
 	\includegraphics<6>[width=\linewidth]{./figures/roles-3.png}
-	\includegraphics[width=\linewidth]{./figures/roles-4.png}
+	\includegraphics<7>[width=\linewidth]{./figures/roles-4.png}
 }
+
