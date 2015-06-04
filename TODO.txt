@@ -11,3 +11,9 @@ DICOM 2 :
 - clarifier les SCU et SCP
 - SCU/SCP : uniquement station A dans un premier temps
 - DICOM Conformance Statement à préciser
+
+Suite aux suggestions de Jérôme :
+- ajouter des exercices
+- insister sur les types des attributs
+- préciser les types possibles pour les attributs, et apprendre à les comprendre
+- apprendre à lire un tableau
