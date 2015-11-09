@@ -2,9 +2,6 @@ Code couleur en fonction de l'importance pour l'examen ?
 Expliquer les différents groupes de tags (groupe,élément), e.g. 0010 = groupe patient
 
 DICOM 1 :
-- frise chronologique
-  * mettre au premier plan les lignes noires
-  * ajouter 2015
 - schéma monde réel
   * ajouter examen avant séries
   * découper le schéma en plusieurs slides
