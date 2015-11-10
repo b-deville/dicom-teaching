@@ -3,13 +3,15 @@ Expliquer les différents groupes de tags (groupe,élément), e.g. 0010 = groupe
 
 DICOM 1 :
 - schéma monde réel
-  * ajouter examen avant séries
   * découper le schéma en plusieurs slides
-- exemple de IOD et DIMSE
-– inclure le DICOM Conformance Statement dès ce cours ?
+- exemple de IOD
+- exemple de DICOM Conformance Statement
+- exercice : trouver l'ensemble des attributs mandatory d'un module 
 
 DICOM 2 :
 - vérifier l’ensemble des slides
+- exemple de DIMSE
+- tags
 - ajouter l’exemple de DICOM Conformance Statement
 - clarifier les SCU et SCP
 - SCU/SCP : uniquement station A dans un premier temps
@@ -19,4 +21,4 @@ Suite aux suggestions de Jérôme :
 - ajouter des exercices
 - insister sur les types des attributs
 - préciser les types possibles pour les attributs, et apprendre à les comprendre
-- apprendre à lire un tableau
+- apprendre à lire un tableau/chercher les attributs à partir d'un IOD
