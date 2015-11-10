@@ -59,7 +59,8 @@
 
 \frame
 {
-	\frametitle{Sch\'ema d'un IOD}
+	\frametitle{Sch\'ema de l'IOD image CR}
+	\label{imageCR-IOD}
 	
 	\begin{center}
 		\includegraphics[width=\linewidth]{./figures/IO-definition.png}
@@ -70,14 +71,14 @@
 {
 	\frametitle{Objet}
 	\begin{itemize}
-		\item<1-> Terminologie : objet = Data Set (= ensemble de donn\'ees).
-		\item<2-> Un Data Set est compos\'e de Data Elements.
-		\item<3-> Chaque Data Element instancie un attribut de l'IOD.
-		\item<4-> Data Element
+		\item<1-> Terminologie : objet = Data Set (\emph{e.g.} ensemble de donn\'ees).
+		\item<2-> Un Data Set contient des Data Elements.
+		\item<3-> Chaque Data Element donne une valeur \`a un et un seul attribut de l'IOD.
+		\item<4-> Contenu d'un Data Element :
 		\begin{itemize}
 			\item<5-> Étiquette d'identification (\emph{Tag}) contenant deux num\'eros.
 			\item<6-> Type (\emph{VR} = \emph{Value Representation}).
-			\item<7-> Taille de la valeur.
+			\item<7-> Taille en m\'emoire de la valeur.
 			\item<8-> Valeur.
 		\end{itemize}
 	\end{itemize}
@@ -111,7 +112,7 @@
 	\frametitle{Fichier DICOM}
 	
 	\begin{itemize}
-		\item Encapsuler l'ensemble des objets dans un fichier.
+		\item Agr\'eger l'ensemble des objets dans un fichier.
 		\begin{itemize}
 			\item<2-> Ent\^ete : pr\'e-ent\^ete et objets.
 			\item<3-> Image : donn\'ees brutes de l'image.

@@ -1,12 +1,14 @@
 Code couleur en fonction de l'importance pour l'examen ?
-Expliquer les différents groupes de tags (groupe,élément), e.g. 0010 = groupe patient
+Expliquer les différents groupes de tags (groupe,élément), e.g. 0010 = groupe patient, 0008 study
+MAIS : date de v2, groupes plus vraiment d'actualité
 
 DICOM 1 :
 - schéma monde réel
   * découper le schéma en plusieurs slides
-- exemple de IOD
 - exemple de DICOM Conformance Statement
-- exercice : trouver l'ensemble des attributs mandatory d'un module 
+- exercice :
+  * trouver l'ensemble des attributs mandatory pour une IRM
+  * compléter le schéma de l'IOD image CR
 
 DICOM 2 :
 - vérifier l’ensemble des slides
