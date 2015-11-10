@@ -2,25 +2,6 @@
 
 	\frame
 	{
-		\frametitle{Jeu de mains\ldots}
-		
-		\begin{block}{Exercice}
-			Jusqu'\`a combien pouvez-vous compter avec vos $10$ doigts ?
-		\end{block}
-		
-		\begin{block}<2->{R\'eponse}
-			1023 !
-		\end{block}
-		
-		\begin{center}
-			\includegraphics<3>[width=.5\linewidth]{./figures/mains.png}
-			\includegraphics<4>[width=.5\linewidth]{./figures/digits.png}
-		\end{center}
-
-	}
-	
-	\frame
-	{
 		\frametitle{Repr\'esentations num\'eriques}
 		\begin{itemize}
 			\item<1-> Repr\'esentation num\'erique : \emph{syst\`eme de num\'eration}.
@@ -50,7 +31,7 @@
 			\begin{itemize}
 				\item<5-> base $2$,
 				\item<6-> ou \emph{binaire},
-				\item<7-> $0/1$, soit pas de courant/courant.
+				\item<7-> $0/1$, soit du courant/pas de courant.
 			\end{itemize}
 			\item<8-> Informatique
 			\begin{itemize}
@@ -76,7 +57,7 @@
 		
 		Exemples :
 		\begin{description}
-			\item<2-> $2013_{10} = 2\cdot10^3 + 0\cdot10^2 + 1\cdot10^1+3\cdot10^0$
+			\item<2-> $2015_{10} = 2\cdot10^3 + 0\cdot10^2 + 1\cdot10^1+5\cdot10^0$
 			\item<3-> $199_{10} = 1\cdot2^7 + 1\cdot2^6 + 0\cdot2^5+0\cdot2^4 + 0\cdot2^3 + 1\cdot2^2 + 1\cdot2^1+1\cdot2^0 = 11000111_2$
 		\end{description}
 	}
@@ -91,18 +72,33 @@
 			\item<4-> Little Endian : moins importants en dernier.
 			\item<5-> Big Endian : plus importants en dernier.
 		\end{itemize}
-		\item<6-> Exemple avec l'entier 2012 :
+		\item<6-> Exemple avec l'entier 2015 :
 		\begin{itemize}
 			\item<7-> Sur 2 octets
 			\begin{itemize}
-				\item<8-> Little Endian : 0x07DC
-				\item<9-> Big Endian : 0xDC07
+				\item<8-> Little Endian : 0x07DF
+				\item<9-> Big Endian : 0xDF07
 			\end{itemize}
 			\item<10-> Sur 4 octets
 			\begin{itemize}
-				\item<11-> Little Endian : 0x000007DC
-				\item<12-> Big Endian : 0xDC070000
+				\item<11-> Little Endian : 0x000007DF
+				\item<12-> Big Endian : 0xDF070000
 			\end{itemize}
 		\end{itemize}
 	\end{itemize}
 }
+
+\frame
+{
+    \frametitle{Le rapport avec DICOM ?}
+    \begin{itemize}
+        \item Un Data Element contient 4 champs (Tag, VR, Size, Value) dont :
+        \begin{description}
+            \item<2->[Tag] En h\'exad\'ecimal.
+            \item<3->[Value Representation] Le type d'encodage de la valeur.\\
+                \includegraphics<4->[width=\linewidth]{./figures/types.png}
+        \end{description}
+        \item<5-> Certains DICOM cod\'es en Little Endian, d'autre en Big Endian. 
+    \end{itemize}
+}
+
