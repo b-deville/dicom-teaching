@@ -26,12 +26,12 @@
 		Une repr\'esentation num\'erique doit \^etre adapt\'ee \`a ce qu'elle compte.
 		\begin{itemize}
 			\item<2-> Base $10$ : $10$ doigts.
-			\item<3-> Autre base connue ;  $60$.
-			\item<4-> \'Electronique (et par extention informatique) :
+			\item<3-> Autre base connue :  $60$.
+			\item<4-> \'Electronique (et par extension informatique) :
 			\begin{itemize}
 				\item<5-> base $2$,
 				\item<6-> ou \emph{binaire},
-				\item<7-> $0/1$, soit du courant/pas de courant.
+				\item<7-> $1/0$, soit du courant/pas de courant.
 			\end{itemize}
 			\item<8-> Informatique
 			\begin{itemize}
@@ -92,13 +92,29 @@
 {
     \frametitle{Le rapport avec DICOM ?}
     \begin{itemize}
-        \item Un Data Element contient 4 champs (Tag, VR, Size, Value) dont :
+        \item Un Data Element contient 4 champs (Tag, Value Representation, Size, Value) dont :
         \begin{description}
             \item<2->[Tag] En h\'exad\'ecimal.
-            \item<3->[Value Representation] Le type d'encodage de la valeur.\\
-                \includegraphics<4->[width=\linewidth]{./figures/types.png}
+            \item<3->[VR] Le type d'encodage de la valeur.\\
+                \includegraphics<4->[width=.5\linewidth]{./figures/types.jpg}
         \end{description}
         \item<5-> Certains DICOM cod\'es en Little Endian, d'autre en Big Endian. 
     \end{itemize}
+}
+
+\frame
+{
+    \frametitle{Types de VR}
+    L'ensemble des VR existants est d\'efini dans la table 6.2-1 \emph{DICOM Value Representation} du standard.
+
+    Quelques exemples :
+    \begin{description}
+        \item<2->[AS] Age String (e.g. 023Y, 005M, 012D).
+        \item<3->[DA] Date, au format YYYYMMDD.
+        \item<4->[DT] Date Time, YYYYMMDDHHMMSS.FFFFFF\&{}ZZXX.
+        \item<5->[OD] Other Double String (suite de $2^{32}$ octets maximum).
+        \item<6->[PN] Person Name (e.g. Doe\^{}John).
+        \item<7->[UI] Unique Identifier (UID), 64 caract\`eres maximum (\{0-9,.\}).
+    \end{description}
 }
 
