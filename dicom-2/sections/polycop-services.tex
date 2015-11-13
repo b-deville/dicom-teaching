@@ -14,8 +14,8 @@
 		\end{itemize}
 		\item Services diff\'erents sur les objets composites ou normalis\'es :
 		\begin{description}
-			\item[5 composites] C-STORE\footnote{Op\'eration}, C-FIND$^1$, C-MOVE$^1$, C-GET$^1$, C-ECHO$^1$.
-			\item[6 normalis\'es] N-GET$^1$, N-ACTION$^1$, N-SET$^1$, N-CREATE$^1$, N-DELETE$^1$, N-EVENT-REPORT\footnote{Notification}.
+			\item[5 composites] C-STORE\footnote{Op\'eration}<7->, C-FIND$^1$, C-MOVE$^1$, C-GET$^1$, C-ECHO$^1$.
+			\item[6 normalis\'es] N-GET$^1$, N-ACTION$^1$, N-SET$^1$, N-CREATE$^1$, N-DELETE$^1$, N-EVENT-REPORT\footnote{Notification}<8->.
 		\end{description}
 	\end{itemize}
 }
@@ -38,28 +38,28 @@
 		\end{itemize}
 		\item[Modality worklist]~\\
 		\begin{itemize}
-			\item Interrogation d'une modalit\'e au syst\`eme de planification.
+			\item Interrogation par une modalit\'e du syst\`eme de planification.
 			\item R\'ecup\'eration de la liste des examens pr\'evus.
 			\item Examens document\'es : identification du patient, proc\'edure, prescripteur.
 		\end{itemize}
 	\end{description}
 }
 
-\frame
-{
-	\frametitle{Autres services}
-	\setbeamertemplate{description item}[align left]
-	\begin{description}
-		\item[Printing]~\\
-		D\'emod\'e depuis les imprimantes PostScript.
-		\item[Storage commitment]~\\
-		Confirmer qu'un objet est stock\'e de mani\`ere permanente.
-		\item[Modality performed procedure step]~\\
-		Permet de diffuser l'information d'avancement d'un examen.
-		\item[Offline media]~\\
-		D\'etails sur le stockage sur support CD, DVD, etc.
-	\end{description}
-}
+%\frame
+%{
+%	\frametitle{Autres services}
+%	\setbeamertemplate{description item}[align left]
+%	\begin{description}
+%		\item<1->[Printing]~\\
+%		D\'emod\'e depuis les imprimantes PostScript.
+%		\item<2->[Storage commitment]~\\
+%		Confirmer qu'un objet est stock\'e de mani\`ere permanente.
+%		\item<3->[Modality performed procedure step]~\\
+%		Permet de diffuser l'information d'avancement d'un examen.
+%		\item<4->[Offline media]~\\
+%		D\'etails sur le stockage sur support CD, DVD, etc.
+%	\end{description}
+%}
 
 \frame
 {
@@ -67,10 +67,10 @@
 	\begin{itemize}
 		\item Chaque \'equipement joue un r\^ole d\'ependant du service :
 		\begin{description}
-			\item[SCU] Service Class User (le client)
-			\item[SCP] Service Class Provider (le serveur)
+			\item[SCU] Service Class User (le client).
+			\item[SCP] Service Class Provider (le serveur).
 		\end{description}
-		\item Le SCU initie une demande, le SCP r\'epond.
+		\item Le SCU initie une demande, le SCP, qui fournit le service, r\'epond.
 	\end{itemize}
 	
 	\begin{center}
@@ -93,17 +93,11 @@
 		\item puis SCP dans un second temps :
 		\begin{enumerate}
 		\setcounter{enumi}{2}
-			\item C demande l'examen \`a B ;
-			\item B transmet l'examen \`a C.
+			\item B demande l'examen \`a A ;
+			\item A transmet l'examen \`a B.
 		\end{enumerate}
 	\end{itemize}
 	
-	\includegraphics[width=\linewidth]{./figures/roles.png}
-%	\includegraphics<2>[width=\linewidth]{./figures/roles-scu.png}
-%	\includegraphics<3>[width=\linewidth]{./figures/roles-1.png}
-%	\includegraphics<4>[width=\linewidth]{./figures/roles-2.png}
-%	\includegraphics<5>[width=\linewidth]{./figures/roles-scp.png}
-%	\includegraphics<6>[width=\linewidth]{./figures/roles-3.png}
-%	\includegraphics<7>[width=\linewidth]{./figures/roles-4.png}
+	\includegraphics[width=\linewidth]{./figures/roles-4.png}
 }
 
