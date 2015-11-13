@@ -9,7 +9,6 @@ DICOM 2 :
 - vérifier l’ensemble des slides
 - ajouter l’exemple de DICOM Conformance Statement
 - clarifier les SCU et SCP
-- SCU/SCP : uniquement station A dans un premier temps
 - DICOM Conformance Statement à préciser
 
 Suite aux suggestions de Jérôme :
