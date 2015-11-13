@@ -6,8 +6,6 @@ DICOM 1 :
   * mettre au premier plan les lignes noires
 
 DICOM 2 :
-- corriger la figure digits.png (main gauche)
-- corriger scu-scp.png (SCP!)
 - vérifier l’ensemble des slides
 - ajouter l’exemple de DICOM Conformance Statement
 - clarifier les SCU et SCP
