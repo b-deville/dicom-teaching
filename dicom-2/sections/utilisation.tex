@@ -4,18 +4,18 @@
 {
 	\frametitle{Anonymisation}
 	\begin{itemize}
-		\item<1-> Utilisation d'images cliniques pour la recherche ou l'enseignement.
-		\item<2-> Fichiers mis \`a disposition du public.
-		\item<3-> N\'ecessit\'e d'anonymat : suppression des informations personnelles permettant d'identifier le patient.
+		\item Utilisation d'images cliniques pour la recherche ou l'enseignement.
+		\item Fichiers mis \`a disposition du public.
+		\item N\'ecessit\'e d'anonymat : suppression des informations personnelles permettant d'identifier le patient.
 		\begin{itemize}
-			\item<4-> PatientsName (0010,0010)
-			\item<5-> PatientID (0010,0020)
-			\item<6-> PatientBirthDate (0010,0030)
+			\item PatientsName (0010,0010)
+			\item PatientID (0010,0020)
+			\item PatientBirthDate (0010,0030)
 			
 			$\rightarrow$ de type 1 : \`a remplacer, pas supprimer !
-			\item<7-> ReferringPhysicianName (0008,0090)
-			\item<8-> etc.
-			\item<9-> Potentiellement plus de 250 champs \`a supprimer ou \`a vider !
+			\item ReferringPhysicianName (0008,0090)
+			\item etc.
+			\item Potentiellement plus de 250 champs \`a supprimer ou \`a vider !
 		\end{itemize}
 	\end{itemize}
 }
@@ -24,26 +24,26 @@
 {
 	\frametitle{Achat d'un \'equipement}
 	\begin{enumerate}
-		\item<1-> Avant l'achat, soumission de l'appel d'offre :
+		\item Avant l'achat, soumission de l'appel d'offre :
 		\begin{itemize}
-			\item<2-> D\'efinition du sc\'enario de travail souhait\'e.
+			\item D\'efinition du sc\'enario de travail souhait\'e.
 
                 Exemple : les images brutes export\'ees pourront \^etre r\'eutilis\'ees \emph{a posteriori}.
-			\item<3-> R\'edaction du cahier des charges DICOM.
+			\item R\'edaction du cahier des charges DICOM.
 			\begin{itemize}
-				\item<4-> Pr\'eciser le niveau d'exigence de DICOM.
+				\item Pr\'eciser le niveau d'exigence de DICOM.
 				
 				$\rightarrow$ faire appel \`a un consultant ou \`a des coll\`egues,
 				
 				$\rightarrow$ ou acqu\'erir le savoir-faire en interne.
-				\item<5-> Demander le Document de Conformit\'e DICOM (DICOM Conformance Statement).
+				\item Demander le Document de Conformit\'e DICOM (DICOM Conformance Statement).
 			\end{itemize}
 		\end{itemize}
-		\item<6-> Acceptation protocol\'ee.
+		\item Acceptation protocol\'ee.
 		\begin{itemize}
-			\item<7-> V\'erification de DICOM.
-			\item<8-> V\'erification du/des sc\'enario/ii requis.
-			\item<9-> Tests.
+			\item V\'erification de DICOM.
+			\item V\'erification du/des sc\'enario/ii requis.
+			\item Tests.
 		\end{itemize}
 	\end{enumerate}
 }
@@ -52,12 +52,12 @@
 {
 	\frametitle{DICOM Conformance}
 	\begin{itemize}
-		\item<2-> Le standard pr\'evoit un document "DICOM Conformance Statement" dont le plan et la structure sont pr\'ed\'efinis.
-		\item<3-> Par ce document, le fournisseur pr\'ecise le niveau de conformit\'e de son \'equipement au standard DICOM.
+		\item Le standard pr\'evoit un document "DICOM Conformance Statement" dont le plan et la structure sont pr\'ed\'efinis.
+		\item Par ce document, le fournisseur pr\'ecise le niveau de conformit\'e de son \'equipement au standard DICOM.
 		\begin{itemize}
-			\item<4-> Applicable sur chaque mod\`ele, chaque version.
-			\item<5-> Le document suit un plan pr\'evu dans le standard.
-			\item<6-> Liste des SOP Class support\'ees et des r\^oles assur\'es (SCU, SCP).
+			\item Applicable sur chaque mod\`ele, chaque version.
+			\item Le document suit un plan pr\'evu dans le standard.
+			\item Liste des SOP Class support\'ees et des r\^oles assur\'es (SCU, SCP).
 		\end{itemize}
 	\end{itemize}
 }
@@ -72,17 +72,17 @@
 	\frametitle{Services \`a demander}
 	Exemples typiques de services DICOM \`a exiger pour un scanner :
 	\begin{itemize}
-		\item<2-> Worklist (SCU) : Import de la liste de patients.
-		\item<3-> Store : envoi des images par r\'eseau
+		\item Worklist (SCU) : Import de la liste de patients.
+		\item Store : envoi des images par r\'eseau
 		\begin{itemize}
-			\item<4-> Envoi : modalit\'es (SCU) : \textbf{CT}.
-			\item<5-> R\'eception (SCP) : \textbf{CT}, \textbf{IRM}.
+			\item Envoi : modalit\'es (SCU) : \textbf{CT}.
+			\item R\'eception (SCP) : \textbf{CT}, \textbf{IRM}.
 		\end{itemize}
-		\item<6-> Print (SCU) : envoi des images pour impression
+		\item Print (SCU) : envoi des images pour impression
 	\end{itemize}
 	
 	\begin{center}
-		\includegraphics<7->[width=\linewidth]{./figures/services-ct.png}
+		\includegraphics[width=\linewidth]{./figures/services-ct.png}
 	\end{center}
 
 }
@@ -95,9 +95,9 @@
 		\item Int\'egrer dans un workflow DICOM : installer une passerelles de conversion.
 		
 		\begin{center}
-			\includegraphics<2->[width=\linewidth]{./figures/passerelle.png}
+			\includegraphics[width=\linewidth]{./figures/passerelle.png}
 		\end{center}
-		\item<3-> Limitation : images stock\'ees en mode Secondary Capture (IOD le plus simple de DICOM), les donn\'ees d'acquisition des images sont perdues.
+		\item Limitation : images stock\'ees en mode Secondary Capture (IOD le plus simple de DICOM), les donn\'ees d'acquisition des images sont perdues.
 	\end{itemize}
 }
 
