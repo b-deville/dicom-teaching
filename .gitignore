@@ -110,3 +110,9 @@ sympy-plots-for-*.tex/
 .DS_Store
 #*.pdf
 *.swp
+*.synctex
+*.autosave
+*.dia~
+2014-pdf
+DICOM-1.pdf
+DICOM-2.pdf

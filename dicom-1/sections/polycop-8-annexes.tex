@@ -1,0 +1,51 @@
+\section*{Annexes}
+
+\frame
+{
+	\frametitle{UID}
+	Unique Identifier
+	\begin{itemize}
+		\item 64 caract\`eres maximum, combinaison entre chiffres et points (OSI Object Identication, numeric form, ISO 8824)
+		\item Afin d'en assurer l'unicit\'e, le UID est compos\'e par deux parties encha\^in\'ees :
+		\begin{itemize}
+			\item Une racine li\'ee \`a une organisation (racine attribu\'ee par la norme ISO 9823-3)
+			\item Un suffixe garanti unique par l'organisation
+		\end{itemize}
+	\end{itemize}
+	La racine $1.2.840.10008$ identifie le standard DICOM
+}
+
+\frame
+{
+	\frametitle{\'Etiquettes d'identification}
+	\begin{itemize}
+		\item S\'epar\'ees en Groupe et \'el\'ement
+		\item Notation hexad\`ecimale (0123456789ABDCEF)
+		\item Identification unique, typage li\'e
+		\begin{description}
+			\item[(0010,0010)] Patient Name (PN)
+			\item[(0010,0020)] Patient ID (LO)
+			\item[(0008,0050)] Accession Number (SH)
+			\item[(0020,000d)] Study Instance UID (UI)
+			\item[(7fe0,0010)] Pixel Data (OW ou OB)
+		\end{description}
+	\end{itemize}
+}
+
+%\frame
+%{
+%	\frametitle{Typage}
+%	Diff\'erents types possibles pour les Data Elements.
+%	Analogie avec le jeu des formes pour les enfants.
+%}
+
+\frame
+{
+	\frametitle{SOP -- Images}
+	Selon la classe SOP, un objet DICOM peut d\'ecrire une ou plusieurs images.
+	
+	Par exemple, il est normal de stocker une s\'equence d'images pour une \'echographie.
+	
+	G\'en\'eralement, on parle d'Enhanced DICOM pour les objets d\'ecrivant plusieurs images.
+}
+

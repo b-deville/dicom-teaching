@@ -4,10 +4,10 @@
 	
 	\frame
 	{
-		\frametitle{Buts globaux}
+		\frametitle{Buts g\'en\'eraux}
 		\begin{itemize}
 			\item Trouver un langage commun pour l'\'echange (images et donn\'ees pertinentes) entre \'equipements d'imagerie : mettre en place un standard.
-			\item Pousser les vendeurs \`a supporter ce langage commun.
+			\item Pousser les vendeurs \`a parler et comprendre ce langage commun.
 			\item Standardiser :
 			\begin{itemize}
 				\item le stockage (i.e. format de fichier) ;
@@ -18,9 +18,9 @@
 	
 	\frame
 	{
-		\frametitle{Buts pr\'ecis}
+		\frametitle{Buts sp\'ecifiques}
 		
-		Il faut que lors de l'installation d'une nouvelle modalit\'e, le DICOM permette, sans changement d'un quelconque composant logiciel :
+		Il faut que lors de l'installation d'une nouvelle modalit\'e, le DICOM permette, sans changement d'un quelconque composant logiciel (\emph{i.e. Plug \& Play} :
 		\begin{itemize}
 			\item l'interrogation du PACS ;
 			\item la r\'ecup\'eration des images cr\'e\'ees par d'autres syst\`emes ;
@@ -33,32 +33,31 @@
 
 	\frame
 	{
-		\frametitle{Monde r\'eel}
-		Au cours d'un suivi m\'edical, un patient se voit prescrire des examens radiologiques par son m\'edecin.
-		
-		On peut sch\'ematiser la proc\'edure comme suit :
-		
-		\includegraphics[width=\linewidth]{./figures/scenario.png}
-		
-		DICOM d\'ecrit ces donn\'ees et relations.
-		
-		La pr\'ecision du contenu et des liens d\'epend des outils et des utilisateurs (e.g. RIS et PACS).
+		\frametitle{Prescription d'un examen radiologique}
+		\begin{itemize}
+			\item Sch\'ematisation de la proc\'edure :
+			\includegraphics[width=\linewidth]{./figures/scenario.png}
+			\item DICOM d\'ecrit ces donn\'ees et ces relations.
+			\item La pr\'ecision du contenu et des liens d\'epend des outils et des utilisateurs (\emph{e.g.} RIS, PACS).
+		\end{itemize}
 	}
 
 	\frame
 	{
 		\frametitle{Traduire le r\'eel en num\'erique}
 		
-		Un objet DICOM combine donc :
 		\begin{itemize}
-			\item des donn\'ees, ou informations (e.g. nom du patient, donn\'ees de l'image,\ldots) ;
-			\item et services, ou fonctions (e.g. sauvegarder, imprimer,\ldots).
-		\end{itemize}
-		
-		Le traitement DICOM d'une information consiste alors \`a regrouper :
-		\begin{itemize}
-			\item l'\emph{Information Objet}, contenant les donn\'ees de l'objet, respectant une \emph{Information Object Definition} (ou \emph{IOD}) ;
-			\item et une fonction sp\'ecifique, ou \emph{Service}, d\'efini par un \emph{DICOM Message Service Element}, ou \emph{DIMSE}.
+			\item Un objet DICOM combine donc :
+			\begin{itemize}
+				\item des donn\'ees, ou informations (e.g. nom du patient, donn\'ees de l'image,\ldots) ;
+				\item et services, ou fonctions (e.g. sauvegarder, imprimer,\ldots).
+			\end{itemize}
+			
+			\item Le traitement DICOM d'une information consiste alors \`a regrouper :
+			\begin{itemize}
+				\item les donn\'ees, contenues dans un \emph{Information Objet}, que le standard d\'efinit gr\^ace \`a une \emph{Information Object Definition} (ou \emph{IOD}) ;
+				\item et une fonction sp\'ecifique, ou \emph{Service}, d\'efinie par un \emph{DICOM Message Service Element} (ou \emph{DIMSE}).
+			\end{itemize}
 		\end{itemize}
 	}
 	
@@ -69,15 +68,15 @@
 		\begin{itemize}
 			\item La combinaison Information Objet + Service est :
 			\begin{itemize}
-				\item appel\'ee \emph{Service/Object Pair} ou \emph{SOP} ;
-				\item l'\'el\'ement principal de la conformit\'e au standard ;
+				\item appel\'ee \emph{Service/Object Pair} (ou \emph{SOP}) ;
+				\item un \'el\'ement important pour d\'eterminer la conformit\'e au standard ;
 				\item identifi\'ee par un identifiant unique nomm\'e \emph{SOP Class UID}.
 			\end{itemize}
 		
 			\item Standard DICOM = annuaire de SOP.\\
-			SOP Class UID = num\'ero unique pour trouver \`a quelle paire correspond un objet DICOM.\\
-			Analogies : num\'ero AVS, adresse IP,\ldots
-
+			SOP Class UID = num\'ero unique pour trouver \`a quelle paire Service/Objet correspond un objet DICOM.
+			\item Analogie : annuaire\\
+			Une entr\'ee = paire \{t\'el\'ephone $+$ adresse\}.
 			\item Exemples de SOP Class UID :
 			\begin{description}
 				\item[$1.2.840.10008.5.1.4.1.1.1$] CR Image Store (enregistrer un CR) ;
@@ -90,7 +89,7 @@
 	{
 		\frametitle{Sch\'ema de construction du SOP}
 		\begin{center}
-			\includegraphics[width=\linewidth]{./figures/sop-definition.png}
+			\includegraphics[width=\linewidth]{./figures/sop-definition-IOD.png}
 		\end{center}		
 	}
 

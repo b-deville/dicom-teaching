@@ -1,19 +1,14 @@
 Code couleur en fonction de l'importance pour l'examen ?
-Expliquer les différents groupes de tags (groupe,élément), e.g. 0010 = groupe patient
+Expliquer les différents groupes de tags (groupe,élément), e.g. 0010 = groupe patient, 0008 study
+Utiliser l’anonymisation comme exemple de parcours du standard.
 
 DICOM 1 :
-- frise chronologique
-  * mettre au premier plan les lignes noires
+- schéma monde réel
+  * découper le schéma en plusieurs slides
+- exemple de DICOM Conformance Statement
 
 DICOM 2 :
-- vérifier l’ensemble des slides
+- exemple de DIMSE
+- tags
 - ajouter l’exemple de DICOM Conformance Statement
-- clarifier les SCU et SCP
-- SCU/SCP : uniquement station A dans un premier temps
 - DICOM Conformance Statement à préciser
-
-Suite aux suggestions de Jérôme :
-- ajouter des exercices
-- insister sur les types des attributs
-- préciser les types possibles pour les attributs, et apprendre à les comprendre
-- apprendre à lire un tableau

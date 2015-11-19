@@ -2,63 +2,60 @@
 
 	\frame
 	{
-		\frametitle{Que signifie DICOM ?}
+		\frametitle{Qu'est-ce que DICOM ?}
 		
-		\textbf{D}igital \textbf{I}maging and \textbf{Co}mmunications in \textbf{M}edicine
-		\begin{itemize}
-			\item<2-> Digital = Num\'erique
-		    	\item<3-> Imaging = Imagerie
-		    	\item<4-> Communications
+		\begin{block}{\textbf{D}igital \textbf{I}maging and \textbf{Co}mmunications in \textbf{M}edicine}
+			\begin{itemize}
+				\item<2-> Digital = Num\'erique
+		    	\item<2-> Imaging = Imagerie
+		    	\item<3-> Communications
 		    	\item<4-> Medicine
-		\end{itemize}
-	}
-	
-	\frame
-	{
-		\frametitle{Vocabulaire}
+			\end{itemize}
+		\end{block}
+		
+		\begin{block}<5->{Vocabulaire}
 		\begin{itemize}
-			\item<1-> Modalit\'e
-			\item<2-> RIS
-			\item<3-> PACS
-			\item<4-> Standard $\neq$ Norme
-			\item<5-> Instance
-			\item<6-> Clunie
-			\item<7-> UID = Unique Identifier
+			\item<6-> Standard $\neq$ Norme
+			\item<7-> Modalit\'e
+			\item<8-> RIS/PACS
+			\item<9-> Instance
+			\item<10-> UID = Unique Identifier
 		\end{itemize}
+		\end{block}
 	}
 	
 	\frame
 	{
 		\frametitle{Le standard en d\'etails}
-		Plus de $5000$ pages de documentation r\'eparties en \st{$20$} $18$ chapitres.
+		Plus de $5300$ pages de documentation r\'eparties en $18$ chapitres.
 		
 		\begin{columns}\begin{scriptsize}
 	  	\begin{column}[t]{0.5\linewidth}
 			\begin{itemize}
-				\item PS 3.1: Introduction and Overview (34 pages)
-				\item PS 3.2: Conformance (322 pages)
-				\item PS 3.3: Information Object Definitions (1314 pages)
-				\item PS 3.4: Service Class Specifications (404 pages)
-				\item PS 3.5: Data Structure and Encoding (134 pages)
-				\item PS 3.6: Data Dictionary (196 pages)
-				\item PS 3.7: Message Exchange (128 pages)
-				\item PS 3.8: Network Communication Support for Message Exchange (72 pages)
-				\item \st{PS 3.9: Point-to-Point Communication Support for Message Exchange}
-				\item PS 3.10: Media Storage and File Format for Media Interchange (48 pages)
+				\item DICOM Part 1: Introduction and Overview (34 pages)
+				\item Part 2: Conformance (322 pages)
+				\item Part 3: Information Object Definitions (1338 pages)
+				\item Part 4: Service Class Specifications (404 pages)
+				\item Part 5: Data Structures and Encoding (138 pages)
+				\item Part 6: Data Dictionary (204 pages)
+				\item Part 7: Message Exchange (128 pages)
+				\item Part 8: Network Communication Support for Message Exchange (72 pages)
+%				\item \st{DICOM Part 9: Point-to-Point Communication Support for Message Exchange}
+				\item DICOM Part 10: Media Storage and File Format for Media Interchange (48 pages)
 			\end{itemize}
 	  	\end{column}
 	  	\begin{column}[t]{0.5\linewidth}
 			\begin{itemize}
-				\item PS 3.11: Media Storage Application Profiles (92 pages)
-				\item PS 3.12: Media Formats and Physical Media for Media Interchange (92 pages)
-				\item \st{PS 3.13: Print Management Point-to-Point Communication Support}
-				\item PS 3.14: Grayscale Standard Display Function (66 pages)
-				\item PS 3.15: Security and System Management Profiles (142 pages)
-				\item PS 3.16: Content Mapping Resource (1062 pages)
-				\item PS 3.17: Explanatory Information (628 pages)
-				\item PS 3.18: Web Access to DICOM Persistent Objects (WADO) (114 pages)
-				\item PS 3.19: Application Hosting (96 pages)
-				\item PS 3.20: Transformation of DICOM to and from HL7 Standards (86 pages)
+				\item Part 11: Media Storage Application Profiles (96 pages)
+				\item Part 12: Media Formats and Physical Media for Media Interchange (92 pages)
+%				\item \st{DICOM Part 13: Print Management Point-to-Point Communication Support}
+				\item Part 14: Grayscale Standard Display Function (66 pages)
+				\item Part 15: Security and System Management Profiles (142 pages)
+				\item Part 16: Content Mapping Resource (1150 pages)
+				\item Part 17: Explanatory Information (692 pages)
+				\item Part 18: Web Services (138 pages)
+				\item Part 19: Application Hosting (96 pages)
+				\item Part 20: Imaging Reports using HL7 Clinical Document Architecture (152 pages)
 			\end{itemize}
 	  	\end{column}\end{scriptsize}
 	  	\end{columns}
@@ -69,6 +66,6 @@
 		\frametitle{Pourquoi pas simplement du JPG ?}
 		\ldots ou tout autre format d'images.
 
-		Exemple concret.
+		Exemple concret avec JPG vs DICOM dans OsiriX.
 	}
 
