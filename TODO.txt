@@ -1,5 +1,3 @@
 Code couleur en fonction de l'importance pour l'examen ?
 Expliquer les différents groupes de tags (groupe,élément), e.g. 0010 = groupe patient
-
-DICOM 2 :
-- corriger la figure "SCP service class user" en provider
+Utiliser l’anonymisation comme exemple de parcours du standard.
