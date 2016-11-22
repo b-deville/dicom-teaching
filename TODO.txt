@@ -12,3 +12,10 @@ DICOM 2 :
 - tags
 - ajouter l’exemple de DICOM Conformance Statement
 - DICOM Conformance Statement à préciser
+
+Nouveau cours :
+1. Trajectoire d’une image de l’acquisition à l’interprétation
+2. Cas de refus d’images (SOPInstanceUID, Accession#, etc.)
+3. WADO, WADO RS, C-GET, C-STORE, AET,SopInstanceUID
+4. Décortiquer un DICOM
+
