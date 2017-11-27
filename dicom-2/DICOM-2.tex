@@ -1,26 +1,19 @@
 \documentclass{beamer}
 
-\usetheme{Boadilla}
-
-\usepackage{amsmath}
 \usepackage[francais]{babel}
-\usepackage[applemac]{inputenc}
-\usepackage{tabularx}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{soul}
 
-\usepackage[boxed]{algorithm2e}
-\usepackage{multimedia}
-\usepackage{pgfpages}
-
+\usetheme{Boadilla}
+\setbeamertemplate{footline}[frame number,logo]
 \usenavigationsymbolstemplate{}
 
-\setbeamertemplate{footline}[frame number,logo]
-\defbeamertemplate{description item}{align left}{\insertdescriptionitem\hfill}
-
-\title{DICOM II}
+\title{DICOM}
 \subtitle{Cours HEdS Gen\`eve}
 \author[B. Deville]{Beno\^it Deville - Analyste en informatique}
 \institute[HUG]{H\^opitaux Universitaires de Gen\`eve}
-\date{Session 2016 -- 2017}
+\date{Session 2017-2018}
 
 \begin{document}
 
@@ -37,7 +30,7 @@
 % repeat outline at each section
 \AtBeginSection[] % Do nothing for \section*
 {
-      \begin{frame}<beamer>
+      \begin{frame}
          \frametitle{Rappel du plan}
          \tableofcontents[currentsection]
       \end{frame}
