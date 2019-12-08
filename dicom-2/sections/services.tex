@@ -12,10 +12,11 @@
 			\item<4-> op\'erations (par exemple \emph{store}) ;
 			\item<5-> notifications (e.g. \emph{event report}).
 		\end{itemize}
-		\item<6-> Services diff\'erents sur les objets composites ou normalis\'es :
+		\item<6-> Services diff\'erents selon les objets
 		\begin{description}
-			\item<7->[5 composites] C-STORE\footnote{Op\'eration}<7->, C-FIND$^1$, C-MOVE$^1$, C-GET$^1$, C-ECHO$^1$.
-			\item<8->[6 normalis\'es] N-GET$^1$, N-ACTION$^1$, N-SET$^1$, N-CREATE$^1$, N-DELETE$^1$, N-EVENT-REPORT\footnote{Notification}<8->.
+			\item<7->[Composites] C-STORE, C-FIND, C-MOVE, C-GET, C-ECHO.
+			\item<8->[Normalis\'es] N-GET, N-ACTION, N-SET, N-CREATE, N-DELETE, N-EVENT-REPORT.
+			\item<9->[Web] QIDO-RS, WADO-RS, WADO-URI, STOW-RS, UPS-RS, CAPABILITIES.
 		\end{description}
 	\end{itemize}
 }
@@ -25,23 +26,20 @@
 	\frametitle{Services principaux}
 	\setbeamertemplate{description item}[align left]
 	\begin{description}
-		\item<2->[Store]~\\
-		Envoi/stockage d'objets DICOM.
-		\item<3->[Query/Retrieve]~\\
+		\item<2->[Store] Envoi/stockage d'objets DICOM.
+		\item<3->[Storage Commitment] V\'erification de l'archivage d'une image.
+		\item<4->[Query/Retrieve]~\\
 		\begin{itemize}
-			\item<4-> Un \'equipement interroge un autre \'equipement.
 			\item<5-> Interrogation par crit\`eres \`a diff\'erents niveaux (e.g. patient, examen, s\'erie, image) :
-			\begin{itemize}
-				\item<6-> Exemple : Lister les examens de modalit\'es \textbf{CT} produits depuis \textbf{24h}.
-			\end{itemize}
-			\item<7-> R\'ecup\'eration d'images/s\'eries/examens selon ces m\^emes crit\`eres.
+			\item<6-> R\'ecup\'eration d'images/s\'eries/examens selon ces m\^emes crit\`eres.
 		\end{itemize}
-		\item<8->[Modality worklist]~\\
+		\item<7->[Modality worklist]~\\
 		\begin{itemize}
-			\item<9-> Interrogation par une modalit\'e du syst\`eme de planification.
-			\item<10-> R\'ecup\'eration de la liste des examens pr\'evus.
-			\item<11-> Examens document\'es : identification du patient, proc\'edure, prescripteur.
+			\item<8-> Interrogation par une modalit\'e du syst\`eme de planification.
+			\item<9-> R\'ecup\'eration de la liste des examens pr\'evus.
+			\item<10-> Examens document\'es (identito-vigilance) : identification du patient, proc\'edure, prescripteur.
 		\end{itemize}
+		\item<11->[MPPS] V\'ehiculer les informations sur ce qui est r\'ealis\'e par un syst\`eme.
 	\end{description}
 }
 
@@ -106,4 +104,3 @@
 	\includegraphics<6>[width=\linewidth]{./figures/roles-3.png}
 	\includegraphics<7>[width=\linewidth]{./figures/roles-4.png}
 }
-

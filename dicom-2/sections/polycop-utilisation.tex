@@ -22,6 +22,21 @@
 
 \frame
 {
+	\frametitle{DICOM Conformance Statement}
+	\begin{itemize}
+		\item Document pr\'ecisant le niveau de conformit\'e d'un produit (e.g. modalit\'e, logiciel, etc.) \`a la norme DICOM.
+		\item Plan et structure pr\'ed\'efinis par la norme.
+		\item Tr\`es technique :
+		\begin{itemize}
+			\item Diagrammes des flux de donn\'ees.
+			\item Liste des services fournis.
+			\item Liste des SOP Class support\'ees et des r\^oles assur\'es (SCU, SCP).
+		\end{itemize}
+	\end{itemize}
+}
+
+\frame
+{
 	\frametitle{Achat d'un \'equipement}
 	\begin{enumerate}
 		\item Avant l'achat, soumission de l'appel d'offre :
@@ -50,41 +65,19 @@
 
 \frame
 {
-	\frametitle{DICOM Conformance}
-	\begin{itemize}
-		\item Le standard pr\'evoit un document "DICOM Conformance Statement" dont le plan et la structure sont pr\'ed\'efinis.
-		\item Par ce document, le fournisseur pr\'ecise le niveau de conformit\'e de son \'equipement au standard DICOM.
-		\begin{itemize}
-			\item Applicable sur chaque mod\`ele, chaque version.
-			\item Le document suit un plan pr\'evu dans le standard.
-			\item Liste des SOP Class support\'ees et des r\^oles assur\'es (SCU, SCP).
-		\end{itemize}
-	\end{itemize}
-}
-
-%\frame
-%{
-%	\frametitle{Exemple de DICOM Conformance Statement}
-%}
-
-\frame
-{
 	\frametitle{Services \`a demander}
-	Exemples typiques de services DICOM \`a exiger pour un scanner :
+	Exemples de services DICOM \`a exiger pour un scanner :
 	\begin{itemize}
-		\item Worklist (SCU) : Import de la liste de patients.
-		\item Store : envoi des images par r\'eseau
-		\begin{itemize}
-			\item Envoi : modalit\'es (SCU) : \textbf{CT}.
-			\item R\'eception (SCP) : \textbf{CT}, \textbf{IRM}.
-		\end{itemize}
-		\item Print (SCU) : envoi des images pour impression
+		\item Worklist (SCU)
+		\item MPPS (SCU)
+		\item Store (SCU)  : modalit\'e  \textbf{CT}
+		\item R\'eception (SCP) : \textbf{CT}, \textbf{IRM}.
+		\item Storage Commitment (SCU).
 	\end{itemize}
 	
 	\begin{center}
 		\includegraphics[width=\linewidth]{./figures/services-ct.png}
 	\end{center}
-
 }
 
 \frame
@@ -92,7 +85,7 @@
 	\frametitle{\'Equipements non standards}
 	
 	\begin{itemize}
-		\item Int\'egrer dans un workflow DICOM : installer une passerelles de conversion.
+		\item Int\'egration possible dans un workflow DICOM via une passerelle de conversion.
 		
 		\begin{center}
 			\includegraphics[width=\linewidth]{./figures/passerelle.png}

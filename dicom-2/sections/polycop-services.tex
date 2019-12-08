@@ -14,8 +14,9 @@
 		\end{itemize}
 		\item Services diff\'erents sur les objets composites ou normalis\'es :
 		\begin{description}
-			\item[5 composites] C-STORE\footnote{Op\'eration}, C-FIND$^1$, C-MOVE$^1$, C-GET$^1$, C-ECHO$^1$.
-			\item[6 normalis\'es] N-GET$^1$, N-ACTION$^1$, N-SET$^1$, N-CREATE$^1$, N-DELETE$^1$, N-EVENT-REPORT\footnote{Notification}.
+			\item[Composites] C-STORE, C-FIND, C-MOVE, C-GET, C-ECHO.
+			\item[Normalis\'es] N-GET, N-ACTION, N-SET, N-CREATE, N-DELETE, N-EVENT-REPORT.
+			\item[Web] QIDO-RS, WADO-RS, WADO-URI, STOW-RS, UPS-RS, CAPABILITIES.
 		\end{description}
 	\end{itemize}
 }
@@ -25,15 +26,11 @@
 	\frametitle{Services principaux}
 	\setbeamertemplate{description item}[align left]
 	\begin{description}
-		\item[Store]~\\
-		Envoi/stockage d'objets DICOM.
+		\item[Store] Envoi/stockage d'objets DICOM.
+		\item[Storage Commitment] Confirmer l'archivage permanent d'une image.
 		\item[Query/Retrieve]~\\
 		\begin{itemize}
-			\item Un \'equipement interroge un autre \'equipement.
-			\item Interrogation par crit\`eres \`a diff\'erents niveaux (e.g. patient, examen, s\'erie, image) :
-			\begin{itemize}
-				\item Exemple : Lister les examens de modalit\'es \textbf{CT} produits depuis \textbf{24h}.
-			\end{itemize}
+			\item Interrogation par crit\`eres \`a diff\'erents niveaux (e.g. patient, examen, s\'erie, image,).
 			\item R\'ecup\'eration d'images/s\'eries/examens selon ces m\^emes crit\`eres.
 		\end{itemize}
 		\item[Modality worklist]~\\
@@ -42,24 +39,9 @@
 			\item R\'ecup\'eration de la liste des examens pr\'evus.
 			\item Examens document\'es : identification du patient, proc\'edure, prescripteur.
 		\end{itemize}
+		\item[MPPS] Diffuser l'information d'avancement d'un examen.
 	\end{description}
 }
-
-%\frame
-%{
-%	\frametitle{Autres services}
-%	\setbeamertemplate{description item}[align left]
-%	\begin{description}
-%		\item<1->[Printing]~\\
-%		D\'emod\'e depuis les imprimantes PostScript.
-%		\item<2->[Storage commitment]~\\
-%		Confirmer qu'un objet est stock\'e de mani\`ere permanente.
-%		\item<3->[Modality performed procedure step]~\\
-%		Permet de diffuser l'information d'avancement d'un examen.
-%		\item<4->[Offline media]~\\
-%		D\'etails sur le stockage sur support CD, DVD, etc.
-%	\end{description}
-%}
 
 \frame
 {
