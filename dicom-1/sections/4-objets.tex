@@ -52,10 +52,25 @@
 
 \frame
 {
+ 	\frametitle{IOD composite}
+	\includegraphics[width=\linewidth]{./figures/IO-composite.png}
+}
+
+\frame
+{
+	\frametitle{Exemple d'IOD : DICOM SR}
+	\url{http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_A.35.3.3.html}
+	\begin{center}
+		\includegraphics[width=0.5\linewidth]{./figures/IOD-exemple-SR.png}
+	\end{center}
+}
+
+\frame
+{
 	\frametitle{Exemple d'IOD : image CR}
 	\url{http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_A.2.3.html}
 	\begin{center}
-		\includegraphics[width=0.9\linewidth]{./figures/IOD-exemple.png}
+		\includegraphics[width=0.8\linewidth]{./figures/IOD-exemple-SR.png}
 	\end{center}
 }
 
@@ -83,6 +98,7 @@
 			\item<7-> Taille en m\'emoire de la valeur.
 			\item<8-> Valeur.
 		\end{itemize}
+		\item<9-> L'agr\'egation des Data Elements donnera un fichier DICOM.
 	\end{itemize}
 }
 
@@ -107,19 +123,5 @@
 	\frametitle{Exemple d'objet : Image IRM}
 	
 	\includegraphics[width=\linewidth]{./figures/irm.png}
-}
-
-\frame
-{
-	\frametitle{Fichier DICOM}
-	
-	\begin{itemize}
-		\item Agr\'eger l'ensemble des objets dans un fichier.
-		\begin{itemize}
-			\item<2-> Ent\^ete : pr\'e-ent\^ete et objets.
-			\item<3-> Image : donn\'ees brutes de l'image.
-		\end{itemize}
-		\item<4-> Les d\'etails au prochain cours.
-	\end{itemize}
 }
 
