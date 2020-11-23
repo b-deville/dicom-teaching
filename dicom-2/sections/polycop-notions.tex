@@ -35,11 +35,12 @@
 			\end{itemize}
 			\item Informatique
 			\begin{itemize}
-				\item base $4$ (Bi-Binaire),
 				\item base $8$ (octal),
-				\item ou base $16$ (hexad\'ecimal) : 0 1 2 3 4 5 6 7 8 9 A($=10$) B($=11$) C($=12$) D($=13$) E($=14$) F($=15$).
+				\item base $16$ (hexad\'ecimal) : 0 1 2 3 4 5 6 7 8 9 A($=10$) B($=11$) C($=12$) D($=13$) E($=14$) F($=15$),
+				\item par convention, on pr\'efixe un nombre hexad\'ecimal par $0x$.
 			\end{itemize}
 		\end{itemize}
+		
 	}
 	
 	\frame
@@ -66,14 +67,31 @@
 {
 	\frametitle{Little ou Big Endian}
 	\begin{itemize}
-		\item Origines chaotiques de l'informatique.
-		\item Diff\'erents ordres de stockage pour les valeurs encod\'ees sur plusieurs octets (1 octet = 8 bits = $2^8$ possibilit\'es = 256 valeurs).
-		\begin{itemize}
-			\item Little Endian : moins importants en dernier.
-			\item Big Endian : plus importants en dernier.
-		\end{itemize}
-		\item Sens de lecture du nombre.
-		\item Important pour la mise en relation de deux \'equipements.
+		\item Sens de lecture d'un nombre.
+		\item Diff\'erents ordres de stockage pour les valeurs encod\'ees sur plusieurs octets (1 octet/byte = 8 bits = $2^8$ possibilit\'es = 256 valeurs).
+  		\begin{columns}
+			\begin{column}{.6\textwidth}
+			\minipage[c][0.3\textheight][s]{\columnwidth}
+			\vspace{0.05\textheight}
+			\begin{itemize}
+				\item Big Endian : bits plus importants en premier $\rightarrow$ sens de lecture de gauche \`a droite.
+				\item Little Endian : moins importants en premier $\rightarrow$ sens de lecture de droite \`a gauche.
+			\end{itemize}
+			\vfill
+			\endminipage
+			\end{column}
+			\begin{column}{.4\textwidth}
+			\minipage[c][0.3\textheight][s]{\columnwidth}
+			\begin{figure}
+			\vfill
+            			\centering
+				\includegraphics[width=.9\linewidth]{./figures/endianness.png}
+			\end{figure}
+			\vfill
+			\endminipage
+		\end{column}
+ 		\end{columns}
+		\item Importance pour la communication entre \'equipements.
 	\end{itemize}
 }
 
@@ -87,14 +105,14 @@
             \item[VR] Le type d'encodage de la valeur.\\
                 \includegraphics[width=.5\linewidth]{./figures/types.jpg}
         \end{description}
-        \item Certains DICOM cod\'es en Little Endian, d'autres en Big Endian. 
+        \item Certains DICOM cod\'es en Little Endian, d'autres en Big Endian.
     \end{itemize}
 }
 
 \frame
 {
     \frametitle{Types de VR}
-    L'ensemble des VR existants est d\'efini dans la table 6.2-1 \emph{DICOM Value Representation} du chapitre 5 (\emph{Data Structures and Encoding}) du standard.
+    L'ensemble des VR existants est d\'efini dans la table 6.2-1 \emph{DICOM Value Representation} du chapitre 5, \emph{Data Structures and Encoding} du standard (\url{http://dicom.nema.org/medical/dicom/current/output/chtml/part05/sect_6.2.html}).
 
     Quelques exemples :
     \begin{description}
