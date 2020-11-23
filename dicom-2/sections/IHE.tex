@@ -1,0 +1,43 @@
+\section{DICOM et IHE}
+
+ \frame
+ {
+ 	\frametitle{Integrating the Healthcare Enterprise (IHE)}
+	
+	\begin{itemize} 	 	
+		\item Am\'eliorer le partage d'informations m\'edicales entre logiciels, favoriser l'interop\'erabilit\'e.
+		\item<2-> Spectre plus large que la seule imagerie.
+		\item<3-> Promotion des standards d\'ej\`a \'etablis (\emph{e.g.} DICOM, HL7).
+		\item<4-> Ensemble de profils d'int\'egration.
+		\item<5-> Documentation compl\`ete sur le site Internet d'IHE (\url{https://www.ihe.net}).
+		\item<6-> Des extensions nationales pour les particularismes locaux (\url{https://www.ihe-suisse.ch/fr}).
+	\end{itemize}
+
+ }
+
+\frame
+ {
+ 	\frametitle{Terminologie IHE}
+	
+	\begin{itemize}
+		\item<2-> IHE d\'efinit les diff\'erents acteurs et leurs transactions.
+		\item<3-> Comme DICOM, IHE indique les champs requis selon les cas, avec sa terminologie propre :	
+		\begin{description}
+			\item<->[R] Requis.
+			\item<->[O] Optionnel.
+		\end{description}
+		\item<4-> Un champs R peut avoir des modificateurs (qui peuvent se combiner) :
+		\begin{description}
+			\item<5->[R+] 	Exigence suppl\'ementaire par rapport \`a DICOM.
+			\item<6->[R*] Attribut requis, mais dont l'affichage n'est pas obligatoire.
+		\end{description}
+		\item<7-> Un attribut de type 3 dans un IOD, d\'efini comme R dans IHE, doit \^etre consid\'er\'e comme s'il \'etait de type 2.
+	\end{itemize}
+	
+ }
+
+\frame
+ {
+ 	\frametitle{Exemple concret : partage d'images (XDS-I.b)}
+	Revue de la Section 18 du profil IHE Radiology [RAD], portant sur le partage d'images entre entreprises.
+ }
