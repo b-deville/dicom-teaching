@@ -1,0 +1,128 @@
+\section{Objets DICOM}
+
+\frame
+{
+ 	\frametitle{Information Object Definition}
+  	L'IOD d\'efinit, pour un IO sp\'ecifique, quels sont les attributs qu'on doit/peut trouver dans l'objet.
+  	\begin{description}
+    		\item<2->[Normalized IOD]~\\
+			Repr\'esente une entit\'e unique du monde r\'eel (patient, visite, examen, r\'esultat, interpr\'etation,\ldots)
+			
+			Complexe et peu performant.
+    		\item<3->[Composite IOD]~\\
+			Repr\'esente certains d\'etails de plusieurs objets du monde r\'eel, et les relations entre ces objets (nom du patient, date de l'examen,\ldots)
+		\item<4->[Attributes]~\\
+			Les attributs d'un IOD sont les propri\'et\'es d'un \'el\'ement du monde r\'eel.
+  	\end{description}
+}
+
+\frame
+{
+ 	\frametitle{IOD composite}
+	\includegraphics<2>[width=\linewidth]{./figures/IO-composite-0.png}
+	\includegraphics<4>[width=\linewidth]{./figures/IO-composite-1.png}
+	\includegraphics<6>[width=\linewidth]{./figures/IO-composite-2.png}
+	\includegraphics<8>[width=\linewidth]{./figures/IO-composite-3.png}
+	\includegraphics<10>[width=\linewidth]{./figures/IO-composite-4.png}
+	\includegraphics<12>[width=\linewidth]{./figures/IO-composite-5.png}
+	\includegraphics<14>[width=\linewidth]{./figures/IO-composite-6.png}
+	\includegraphics<16>[width=\linewidth]{./figures/IO-composite-7.png}
+	\includegraphics<18>[width=\linewidth]{./figures/IO-composite-8.png}
+	\includegraphics<20>[width=\linewidth]{./figures/IO-composite.png}
+ 	\begin{itemize}
+		\item<1,3,5,7,9,11,13,15,17,19,21> IOD : agr\'egat d'\emph{Information Entities} ou \emph{IE}.
+   		\item<3,5,7,9,11,13,15,17,19,21> Une IE contient un ou plusieurs \emph{Modules}.
+		\begin{description}
+			\item<5,7,9,11,13,15,17,19,21>[Mandatory] Module obligatoire.
+			\item<7,9,11,13,15,17,19,21>[Conditional] Module conditionnel (obligatoire selon certaines conditions).
+			\item<9,11,13,15,17,19,21>[User Option] Module optionnel.
+		\end{description}
+   		\item<11,13,15,17,19,21> Les modules sont compos\'es d'\emph{Attributs} (= valeurs).
+		\begin{description}
+			\item<13,15,17,19,21>[1] Obligatoire.
+			\item<15,17,19,21>[2] Obligatoire - peut \^etre vide.
+			\item<17,19,21>[3] Optionnel.
+			\item<19,21>[<1/2>C] Conditionnel.
+		\end{description}
+ 	\end{itemize}
+
+	\begin{alertblock}{En pratique}<21>
+		Un objet DICOM est presque toujours une instance d'un IOD composite.
+	\end{alertblock}
+}
+
+\frame
+{
+ 	\frametitle{IOD composite}
+	\includegraphics[width=\linewidth]{./figures/IO-composite.png}
+}
+
+\frame
+{
+	\frametitle{Exemple d'IOD : DICOM SR}
+	\url{http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_A.35.3.3.html}
+	\begin{center}
+		\includegraphics[width=0.5\linewidth]{./figures/IOD-exemple-SR.png}
+	\end{center}
+}
+
+\frame
+{
+	\frametitle{Exemple d'IOD : image CR}
+	\url{http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_A.2.3.html}
+	\begin{center}
+		\includegraphics[width=0.6\linewidth]{./figures/IOD-exemple-CR.png}
+	\end{center}
+}
+
+\frame
+{
+	\frametitle{Sch\'ema de l'IOD image CR}
+	\label{imageCR-IOD}
+	
+	\begin{center}
+		\includegraphics[width=\linewidth]{./figures/IO-definition.png}
+	\end{center}
+}
+
+\frame
+{
+	\frametitle{Objet}
+	\begin{itemize}
+		\item<1-> Terminologie : objet = Data Set (\emph{e.g.} ensemble de donn\'ees).
+		\item<2-> Un Data Set contient des Data Elements (ou \'el\'ements d'information).
+		\item<3-> Chaque Data Element donne une valeur \`a un et un seul attribut de l'IOD.
+		\item<4-> Contenu d'un Data Element :
+		\begin{itemize}
+			\item<5-> Étiquette d'identification (\emph{Tag}) contenant deux num\'eros.
+			\item<6-> Type (\emph{VR} = \emph{Value Representation}).
+			\item<7-> Taille en m\'emoire de la valeur.
+			\item<8-> Valeur.
+		\end{itemize}
+		\item<9-> L'agr\'egation des Data Elements donnera un fichier DICOM.
+	\end{itemize}
+}
+
+\frame
+{
+	\frametitle{Objet}
+	
+	\includegraphics[width=\linewidth]{./figures/objet-dicom.png}
+}
+
+\frame
+{
+	\frametitle{Exemple d'objet : Examen (\emph{Study})}
+	
+	\begin{center}
+		\includegraphics[width=.9\linewidth]{./figures/examen.png}
+	\end{center}
+}
+
+\frame
+{
+	\frametitle{Exemple d'objet : Image IRM}
+	
+	\includegraphics[width=\linewidth]{./figures/irm.png}
+}
+

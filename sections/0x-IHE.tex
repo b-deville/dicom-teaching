@@ -1,0 +1,20 @@
+\frame
+ {
+ 	\frametitle{Terminologie IHE}
+	
+	\begin{itemize}
+		\item IHE d\'efinit les diff\'erents acteurs et leurs transactions.
+		\item<2-> Comme DICOM, IHE indique les champs requis selon les cas, avec sa terminologie propre :	
+		\begin{description}
+			\item<3->[R] Requis.
+			\item<4->[O] Optionnel.
+		\end{description}
+		\item<5-> Un champs R peut avoir des modificateurs (qui peuvent se combiner) :
+		\begin{description}
+			\item<6->[R+] 	Exigence suppl\'ementaire par rapport \`a DICOM.
+			\item<7->[R*] Attribut requis, mais dont l'affichage n'est pas obligatoire.
+		\end{description}
+		\item<8-> Un attribut de type 3 dans un IOD, d\'efini comme R dans IHE, doit \^etre consid\'er\'e comme s'il \'etait de type 2.
+	\end{itemize}
+	
+ }

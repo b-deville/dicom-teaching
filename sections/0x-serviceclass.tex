@@ -1,0 +1,45 @@
+\frame
+{
+	\frametitle{Communication}
+	\begin{itemize}
+		\item Chaque \'equipement joue un r\^ole d\'ependant du service:
+		\begin{description}
+			\item<2->[SCU] Service Class User (le client).
+			\item<3->[SCP] Service Class Provider (le serveur).
+		\end{description}
+		\item<4-> Le SCU initie une demande, le SCP, qui fournit le service, r\'epond.
+	\end{itemize}
+	
+	\begin{center}
+		\includegraphics<5->[width=.8\linewidth]{../figures/scu-scp.png}
+	\end{center}
+}
+
+\frame
+{
+	\frametitle{Changement de r\^ole}
+	Un \'equipement peut changer de r\^ole.
+	
+	Par exemple, une station d'interpr\'etation A peut \^etre:
+	\begin{itemize}
+		\item<2-> SCU dans un premier temps:
+		\begin{enumerate}
+			\item<3-> A sollicite un examen au PACS;
+			\item<4-> Le PACS accepte et envoie l'examen \`a A.
+		\end{enumerate}
+		\item<5-> puis SCP dans un second temps:
+		\begin{enumerate}
+		\setcounter{enumi}{2}
+			\item<6-> B demande l'examen \`a A;
+			\item<7-> A transmet l'examen \`a B.
+		\end{enumerate}
+	\end{itemize}
+	
+	\includegraphics<2>[width=.6\linewidth]{../figures/roles-scu.png}
+	\includegraphics<3>[width=.6\linewidth]{../figures/roles-1.png}
+	\includegraphics<4>[width=.6\linewidth]{../figures/roles-2.png}
+	\includegraphics<5>[width=\linewidth]{../figures/roles-scp.png}
+	\includegraphics<6>[width=\linewidth]{../figures/roles-3.png}
+	\includegraphics<7>[width=\linewidth]{../figures/roles-4.png}
+}
+

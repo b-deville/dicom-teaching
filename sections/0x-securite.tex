@@ -1,0 +1,35 @@
+\frame
+{
+	\frametitle{Et la s\'ecurit\'e dans tout \c ca?}
+	\begin{itemize}
+		\item DICOM n'a pas \'et\'e con\c cu au d\'epart avec le souci de la s\'ecurit\'e des donn\'ees.
+		\item La RGPD est encore r\'ecente.
+		\item Les attaques se multiplient et les donn\'ees m\'edicales sont pr\'ecieuses.
+		\item Certaines donn\'ees patient sont dans les images.
+	\end{itemize}
+	Il y a donc des \'evolutions.
+	\begin{itemize}
+		\item<2-> DICOMweb\texttrademark: profiter de la s\'ecurisation des protocoles Internet pour migrer les services DICOM.
+		\item<3-> Outils de d\'esidentification (e,g, Karnak).
+	\end{itemize}
+}
+
+% \frame
+% {
+% 	\frametitle{D\'esidentification}
+% 	\begin{itemize}
+% 		\item Utilisation d'images cliniques pour la recherche ou l'enseignement.
+% 		\item<2-> Fichiers mis \`a disposition du public.
+% 		\item<3-> N\'ecessit\'e d'anonymat : suppression des informations personnelles permettant d'identifier le patient.
+% 		\begin{itemize}
+% 			\item<4-> PatientsName (0010,0010)
+% 			\item<4-> PatientID (0010,0020)
+% 			\item<4-> PatientBirthDate (0010,0030)
+			
+% 			$\rightarrow$ de type 1 : \`a remplacer, pas supprimer !
+% 			\item<4-> ReferringPhysicianName (0008,0090)
+% 			\item<4-> etc.
+% 			\item<4-> Potentiellement plus de 250 champs \`a supprimer ou \`a vider !
+% 		\end{itemize}
+% 	\end{itemize}
+% }

@@ -1,0 +1,153 @@
+	\frame
+	{
+		\frametitle{Services principaux}
+		\begin{itemize}
+			\item Modality Worklist
+			\item Store
+			\item Modality Performed Procedure Step
+			\item Storage Commitment
+			\item Query/Retrieve
+		\end{itemize}
+	}
+	
+	\frame
+	{
+		\frametitle{Modality Worklist (MWL)}
+		La liste de travail est fournie par le Syst\`eme d'Information Hospitalier (SIH), g\'en\'eralement le RIS.
+		
+		Son r\^ole et son fonctionnement sont de:
+		\begin{itemize}
+			\item<2-> assurer l'identitovigilance lors de la r\'ealisation d'un examen sur une modalit\'e,
+			\item<3-> permettre la s\'election du protocole \`a effectuer,
+			\item<4-> associer de mani\`ere non ambigu\"e les images aux donn\'ees du SIH,
+			\item<5-> obtenir du SIH les donn\'ees \`a ajouter obligatoirement dans les images.
+		\end{itemize}
+		
+	}
+	
+	\frame
+	{
+		\frametitle{MWL Keys}
+			Deux types de \emph{cl\'es} lors de l'interrogation de la worklist:
+			\begin{itemize}
+				\item<2-> Matching Keys: valeurs sur lesquelles on peut interroger la liste de travail.
+				
+				On peut vouloir afficher par exemple \emph{Tous les examens du \textbf{jour} pour la modalit\'e nomm\'ee \textbf{RX06}}.
+				
+				Une matching key est soit \textbf{R}equise, soit \textbf{O}ptionnelle.
+				\item<3-> Return Keys: valeurs renvoy\'ees par la liste de travail.
+				\begin{description}
+					\item<4->[1] Obligatoire.
+					\item<5->[2] Obligatoire~-~peut \^etre vide.
+					\item<6->[3] Optionnelle.
+					\item<7->[<1/2>C] Conditionnelle.
+				\end{description}
+			\end{itemize}
+
+        \begin{alertblock}<8->{Attention!}
+            IHE ajoute des exigences suppl\'ementaires, d\'ecrites dans les profils d'int\'egration.
+        \end{alertblock}
+	}
+	
+	\frame
+	{
+		\frametitle{Modality Performed Procedure Step (MPPS)}
+		Le MPPS permet de suivre le statut d'un examen au cours de sa r\'ealisation.
+
+        En fournissant des informations pr\'ecises et \`a jour, ce service est utile pour la facturation, le monitoring par le prescripteur, le workflow du service producteur, le suivi des patients.
+
+		Il peut \^etre 
+		\begin{itemize}
+			\item<2-> In Progress
+			\item<3-> Completed
+			\item<4-> Discontinued
+		\end{itemize}
+	}
+	
+	\frame
+	{
+		\frametitle{MPPS In Progress}
+		\begin{itemize}
+			\item Timing non d\'efini: peut \^etre envoy\'e au d\'ebut comme \`a la fin de la proc\'edure.
+			\item<2-> Attributs de tra\c cabilit\'e: normalement issus de la worklist (Scheduled Procedure Step ID, Study Instance UID, Accession Number, d\'emographie patient, \ldots).
+			\item<3-> Peut transmettre des d\'etails sur la progression: donn\'ees produites, code des protocoles utilis\'es.
+			\item<4-> Notification implicite: un attribut de tra\c cabilit\'e inconnu du SIH peut signifier un examen non programm\'e.
+		\end{itemize}
+	}
+	
+	\frame
+	{
+		\frametitle{MPPS Completed}
+		\begin{itemize}
+			\item Pas obligatoirement transmis d\`es la fin de la proc\'edure.
+			\item<2-> Inclut aussi les attributs de tra\c cabilit\'e.
+			\item<3-> Liste
+			\begin{itemize}
+				\item<4-> les images (et/ou objets) produites (une s\'erie ne peut \^etre r\'epartie entre plusieurs MPPS),
+				\item<5-> les protocoles r\'ealis\'es (peuvent diff\'erer de ce qui a \'et\'e planifi\'e),
+				\item<6-> le mat\'eriel utilis\'e.
+			\end{itemize}
+			\item<7-> Peut \^etre compl\'et\'e \emph{a posteriori} par d'autres MPPS.
+		\end{itemize}
+	}
+		
+	\frame
+	{
+		\frametitle{MPPS Discontinued}
+		\begin{itemize}
+			\item Peut signifer un examen annul\'e ou stopp\'e en cours de route.
+			\item<2-> Indique la cause de l'arr\^et.
+			\item<3-> Inclut aussi les attributs de tra\c cabilit\'e.
+			\item<4-> Peut lister:
+			\begin{itemize}
+				\item<5-> les images et/ou objets produits,
+				\item<6-> les codes des protocoles compl\'et\'es,
+				\item<7-> le mat\'eriel utilis\'e.
+			\end{itemize}			
+		\end{itemize}
+	}
+	
+	\frame
+	{
+		\frametitle{Attributs}
+		\begin{itemize}
+			\item Un attribut (\emph{Data Element}) contient une valeur (qui peut \^etre une s\'equence de Data Elements).
+			Il est d\'efini par
+			\begin{itemize}
+				\item<2-> une \'etiquette d'identification (\emph{Tag}) form\'ee de deux valeurs sur 4 chiffres,
+				\item<3-> un type (\emph{VR} = \emph{Value Representation}),
+				\item<4-> et un nom intelligible.
+			\end{itemize}
+		
+			\item<5-> Exemple: (0020,000D)~---~UI~---~Study Instance UID
+			\item<6-> Une image est un Data Element comme un autre, par exemple: (7FE0,0010)~---~OB~or~OW~---~Pixel Data
+		\end{itemize}
+	}
+		
+	\frame
+	{
+		\frametitle{Value Representation}
+		DICOM d\'ecrit l'ensemble des types de donn\'ees qu'on peut utiliser dans un fichier: voir le tableau 6.2{-}1 \emph{DICOM Value Representation} du chapitre 5, \emph{Data Structures and Encoding} du standard (\url{http://dicom.nema.org/medical/dicom/current/output/chtml/part05/sect_6.2.html}).
+		
+		Quelques exemples:
+    	\begin{description}
+            \item<2->[AS] Age String (e.g. 023Y, 005M, 012D).
+            \item<3->[DA] Date, au format YYYYMMDD.
+            \item<4->[DT] Date Time, YYYYMMDDHHMMSS.FFFFFF\&{}ZZXX.
+            \item<5->[OD] Other Double String (suite de $2^{32}$ octets maximum)
+            \item<6->[PN] Person Name (e.g. Doe\^{}John).
+		\end{description}
+	}
+
+	\frame
+	{
+		\frametitle{Unique Identifier (UID)}
+		\begin{itemize}
+			\item Value Representation \textbf{UI}.
+			\item<2-> 64 caract\`eres maximum.
+			\item<3-> Compos\'es uniquement de chiffres et de points: $\{0-9,.\}$
+			\item<4-> Une s\'erie de deux chiffres au moins ne peut commencer par $0$.
+			\item<5-> Se divise en deux parties, une \emph{racine} et un \emph{suffixe}: UID~=~\emph{racine}.\emph{suffixe}
+			\item<6-> Permet d'identifier de mani\`ere unique un certains nombre d'objets entre diff\'erents pays, sites, vendeurs, et \'equipements.
+		\end{itemize}
+	}

@@ -1,0 +1,49 @@
+\documentclass[handout]{beamer} %use [handout] mode to ignore overlays (<> commands) 
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{soul}
+
+\definecolor{HUGprimary}{RGB}{147,207,169}
+\definecolor{HUGsecondary}{RGB}{101,198,193}
+\definecolor{HUGtertiary}{RGB}{18,194,242}
+\definecolor{HUGtext}{RGB}{18,194,242}
+
+\usetheme{Boadilla}
+\setbeamertemplate{footline}[frame number,logo]
+\setbeamercolor{structure}{fg=HUGtext}
+\usenavigationsymbolstemplate{}
+\frenchspacing
+
+\title{DICOM}
+\subtitle{Cours HEdS Gen\`eve}
+\author[B. Deville]{Beno\^{\i}t Deville~-~Analyste en informatique}
+\institute[HUG]{H\^opitaux Universitaires de Gen\`eve}
+\date{Session 2023{-}2024}
+
+\begin{document}
+
+\frame{\titlepage}
+
+% repeat outline at each section
+\AtBeginSection[] % Do nothing for \section*
+{
+      \begin{frame}
+         \frametitle{Rappel du plan}
+         \tableofcontents[currentsection]
+      \end{frame}
+}
+
+\input{../sections/01-intro}
+\input{../sections/02-principes}
+\input{../sections/03-MWL}
+\input{../sections/05-fichier}
+\input{../sections/04-store}
+\input{../sections/0x-serviceclass}
+\input{../sections/0x-IHE}
+\input{../sections/0x-securite}
+\input{../sections/06-projet}
+\input{../sections/10-conclusion}
+
+\end{document}
